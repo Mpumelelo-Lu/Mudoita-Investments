@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Site</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/ContactUs.css">
+    <script src="js/scrips.js" defer></script>
+</head>
+<body>
+    <section class="top-section">
+        <!-- Navigation Bar -->
+        <nav class="nav-oval">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="logos/mainlogotransp.png" alt="Logo">
+            </div>
+
+            <!-- Typing Animation -->
+            <div class="typing-container">
+                <span class="typing-text" id="typingText"></span>
+                <span class="cursor">|</span>
+            </div>
+
+            <!-- Navigation Links (hidden by default) -->
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="ContactUs.html" class="nav-link">Contact Us</a>
+                <a href="projects.html" class="nav-link projects">Projects</a>
+            </div>
+
+            <!-- Menu Button -->
+            <button class="menu-btn" id="menuBtn">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </nav>
+    </section>
+
+    
+
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Get In Touch</h1>
+            <p class="hero-subtitle">Have a project in mind? We'd love to hear from you. Let's build something great together.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-grid">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-header">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt" style="color: #fff;"></i></div>
+                        <h3 class="info-title">Our Location</h3>
+                    </div>
+                    <div class="info-details">
+                        Centurion, Gauteng<br>
+                        South Africa
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-header">
+                        <div class="info-icon"><i class="fas fa-envelope" style="color: #fff;"></i></div>
+                        <h3 class="info-title">Email Us</h3>
+                    </div>
+                    <div class="info-details">
+                        <a href="mailto:info@mudoita.co.za">info@mudoita.co.za</a><br>
+                        <a href="mailto:projects@mudoita.co.za">projects@mudoita.co.za</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-header">
+                        <div class="info-icon"><i class="fas fa-phone" style="color: #fff;"></i></div>
+                        <h3 class="info-title">Call Us</h3>
+                    </div>
+                    <div class="info-details">
+                        Office: <a href="tel:+27123456789">+27 12 345 6789</a><br>
+                        Mobile: <a href="tel:+27823456789">+27 82 345 6789</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-header">
+                        <div class="info-icon"><i class="fas fa-clock" style="color: #fff;"></i></div>
+                        <h3 class="info-title">Business Hours</h3>
+                    </div>
+                    <div class="info-details">
+                        Monday - Friday: 8:00 AM - 5:00 PM<br>
+                        Saturday: 9:00 AM - 1:00 PM<br>
+                        Sunday: Closed
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="form-container">
+                <h2 class="form-title">Send Us a Message</h2>
+                <p class="form-subtitle">Fill out the form below and we'll get back to you shortly.</p>
+
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle" style="color: #fff;"></i> Thank you! Your message has been sent successfully. We'll get back to you soon.
+                </div>
+
+                <div class="error-message" id="errorMessage">
+                    <i class="fas fa-times-circle" style="color: #fff;"></i> Oops! Something went wrong. Please try again or contact us directly via email.
+                </div>
+
+                <form id="contactForm" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" class="form-input" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="company">Company Name</label>
+                        <input type="text" id="company" name="company" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="subject">Subject *</label>
+                        <select id="subject" name="subject" class="form-select" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="quote">Request a Quote</option>
+                            <option value="project">New Project</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message *</label>
+                        <textarea id="message" name="message" class="form-textarea" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <div class="footer-column footer-about">
+                    <div class="footer-logo">
+                        <img src="logos/mainlogotransp.png" alt="Mudoita Investments">
+                    </div>
+                    <p class="footer-description">
+                        Building excellence since 2016. Professional civil engineering and construction services for commercial and residential projects.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Home</a></li>               
+                       
+                        <li><a href="projects.html"><i class="fas fa-angle-right"></i> Projects</a></li>
+                        <li><a href="contactUs.html"><i class="fas fa-angle-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Bridge Construction</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Pipeline & Sewer</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Electrification</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Project Management</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> HVAC Systems</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Centurion, South Africa</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+27 (0) 123 456 789</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@mudoita.co.za</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Fri: 8:00 AM - 5:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Mudoita Investment (Pty) Ltd. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="Privacy.html">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  
+
+    <script>
+        // Form Submission
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            // Hide previous messages
+            successMessage.classList.remove('show');
+            errorMessage.classList.remove('show');
+
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+
+            try {
+                // Send POST request to your server endpoint
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    // Show success message
+                    successMessage.classList.add('show');
+                    contactForm.reset();
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    throw new Error('Failed to send message');
+                }
+            } catch (error) {
+                // Show error message
+                errorMessage.classList.add('show');
+                console.error('Error:', error);
+                
+                // Scroll to error message
+                errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } finally {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }
+        });
+    </script>
+</body>
+</html>

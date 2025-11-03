@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Site</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/project.css">
+    <script src="js/scrips.js" defer></script>
+</head>
+<body>
+    <section class="top-section">
+        <!-- Navigation Bar -->
+        <nav class="nav-oval">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="logos/mainlogotransp.png" alt="Logo">
+            </div>
+
+            <!-- Typing Animation -->
+            <div class="typing-container">
+                <span class="typing-text" id="typingText"></span>
+                <span class="cursor">|</span>
+            </div>
+
+            <!-- Navigation Links (hidden by default) -->
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="ContactUs.html" class="nav-link">Contact Us</a>
+                <a href="projects.html" class="nav-link projects">Projects</a>
+            </div>
+
+            <!-- Menu Button -->
+            <button class="menu-btn" id="menuBtn">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </nav>
+    </section>
+
+     <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Our Projects</h1>
+            <p class="hero-subtitle">Delivering excellence across South Africa since 2016</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <span class="filter-label">Filter by:</span>
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="boreholes">Boreholes</button>
+            <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+            <button class="filter-btn" data-filter="sanitation">Sanitation</button>
+            <button class="filter-btn" data-filter="construction">Construction</button>
+            <button class="filter-btn" data-filter="supply">Supply</button>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-container">
+        <div class="projects-grid" id="projectsGrid">
+            <!-- Project 1 - Sandriver Upgrade -->
+            <div class="project-card" data-category="infrastructure">
+                <div class="project-image">
+                    <img src="img/actualsandriver.jpg" alt="Sandriver Package Plant">
+                    <span class="project-category">Infrastructure</span>
+                    <span class="project-status">Completed</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Upgrading of Sandriver Package Plant Phase 1</h3>
+                    <div class="project-client">Client: Bushbuckridge Local Municipality</div>
+                    <div class="project-value">R4,872,412.00</div>
+                    <div class="project-meta">
+                        <span class="project-year">Completed: Aug 2022</span>
+                        <span class="project-contact">Leonah Ngobeni</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 - Boreholes Panel -->
+            <div class="project-card" data-category="boreholes">
+                <div class="project-image">
+                    <img src="img/sandriver.jpg" alt="Borehole Project">
+                    <span class="project-category">Boreholes</span>
+                    <span class="project-status in-progress">In Progress</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Supply, Refurbishment & Drilling of New Boreholes (3-Year Panel)</h3>
+                    <div class="project-client">Client: Bushbuckridge Local Municipality</div>
+                    <div class="project-value">As & When Required</div>
+                    <div class="project-meta">
+                        <span class="project-year">Ongoing Project</span>
+                        <span class="project-contact">Mr Makhavhu</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 - Boreholes Rehab -->
+            <div class="project-card" data-category="boreholes">
+                <div class="project-image">
+                    <img src="img/boreholes.jpg" alt="Borehole Rehabilitation">
+                    <span class="project-category">Boreholes</span>
+                    <span class="project-status">Completed</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Rehabilitation, Maintenance & Drilling of Boreholes</h3>
+                    <div class="project-client">Client: Modimolle-Mokgophong Local Municipality</div>
+                    <div class="project-value">R3,409,800.43</div>
+                    <div class="project-meta">
+                        <span class="project-year">Completed: Feb 2021</span>
+                        <span class="project-contact">LF Manamela</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 - Dzingidzingi -->
+            <div class="project-card" data-category="boreholes">
+                <div class="project-image">
+                    <img src="img/construct.jpg" alt="Water Reticulation">
+                    <span class="project-category">Water Infrastructure</span>
+                    <span class="project-status">Completed</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Borehole Refurbishment, Rising Main & Water Reticulation - Dzingidzingi</h3>
+                    <div class="project-client">Client: Rigogo Projects (Pty) Ltd</div>
+                    <div class="project-value">R1,704,090.00</div>
+                    <div class="project-meta">
+                        <span class="project-year">Completed: Sep 2021</span>
+                        <span class="project-contact">Deon Mashele</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 - Refurbishment -->
+            <div class="project-card" data-category="boreholes">
+                <div class="project-image">
+                    <img src="img/niceborehole.jpg" alt="Borehole Refurbishment">
+                    <span class="project-category">Boreholes</span>
+                    <span class="project-status">Completed</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Refurbishment of Existing Boreholes</h3>
+                    <div class="project-client">Client: Rigogo Projects (Pty) Ltd</div>
+                    <div class="project-value">R1,700,000.00</div>
+                    <div class="project-meta">
+                        <span class="project-year">Completed: Jun 2021</span>
+                        <span class="project-contact">Dion Mashele</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 - School Renovation -->
+            <div class="project-card" data-category="construction">
+                <div class="project-image">
+                    <img src="img/maintenace.jpg" alt="School Building">
+                    <span class="project-category">Construction</span>
+                    <span class="project-status">Completed</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Repairs & Renovation of Admin Block, 8 Classrooms & Science Lab</h3>
+                    <div class="project-client">Client: Sinapi Global (Pty) Ltd</div>
+                    <div class="project-value">R1,219,720.95</div>
+                    <div class="project-meta">
+                        <span class="project-year">Completed: Jan 2017</span>
+                        <span class="project-contact">TG Mnisi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 7 - Mtwalume -->
+            <div class="project-card" data-category="sanitation">
+                <div class="project-image">
+                    <img src="img/pipes.jpg" alt="Sewer Treatment">
+                    <span class="project-category">Sanitation</span>
+                    <span class="project-status">Completed</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Mtwalume Sewer Treatment Works</h3>
+                    <div class="project-client">Client: Umgeni Water</div>
+                    <div class="project-value">R1,030,090.04</div>
+                    <div class="project-meta">
+                        <span class="project-year">Completed: Jan 2017</span>
+                        <span class="project-contact">Mr Phuluwa</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 8 - Lekwa Boreholes -->
+            <div class="project-card" data-category="boreholes">
+                <div class="project-image">
+                    <img src="img/borehole3.jpg" alt="Borehole Drilling">
+                    <span class="project-category">Boreholes</span>
+                    <span class="project-status">Completed</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Drilling & Equipping of Boreholes (Ward 12 & 13)</h3>
+                    <div class="project-client">Client: Lekwa Local Municipality</div>
+                    <div class="project-value">R980,850.00</div>
+                    <div class="project-meta">
+                        <span class="project-year">Completed: Jan 2019</span>
+                        <span class="project-contact">Z July</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 9 - VIP Toilets Ward 4 -->
+            <div class="project-card" data-category="sanitation">
+                <div class="project-image">
+                    <img src="img/toiletconstruct.jpg" alt="VIP Toilets">
+                    <span class="project-category">Sanitation</span>
+                    <span class="project-status">Completed</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Construction of VIP Toilets (Ward 4)</h3>
+                    <div class="project-client">Client: Modimolle-Mokgophong Local Municipality</div>
+                    <div class="project-value">R562,430.00</div>
+                    <div class="project-meta">
+                        <span class="project-year">Completed: Sep 2018</span>
+                        <span class="project-contact">LF Manamela</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 10 - VIP Toilets Ward 8 -->
+            <div class="project-card" data-category="sanitation">
+                <div class="project-image">
+                    <img src="img/toilets.jpg" alt="VIP Toilets Installation">
+                    <span class="project-category">Sanitation</span>
+                    <span class="project-status">Completed</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Installation of VIP Toilets (Ward 8)</h3>
+                    <div class="project-client">Client: Modimolle-Mokgophong Local Municipality</div>
+                    <div class="project-value">R565,000.70</div>
+                    <div class="project-meta">
+                        <span class="project-year">Completed: Sep 2018</span>
+                        <span class="project-contact">LF Manamela</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 11 - Internal Access Road -->
+            <div class="project-card" data-category="infrastructure">
+                <div class="project-image">
+                    <img src="img/safety.jpg" alt="Road Construction">
+                    <span class="project-category">Infrastructure</span>
+                    <span class="project-status">Completed</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Internal Access Road & Bridge (Sewer & Stormwater Works)</h3>
+                    <div class="project-client">Client: Pro-Power Group</div>
+                    <div class="project-value">R551,890.65</div>
+                    <div class="project-meta">
+                        <span class="project-year">Completed: Mar 2018</span>
+                        <span class="project-contact">Mukwevho Tshilidzi</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 12 - Fire Station Borehole -->
+            <div class="project-card" data-category="boreholes">
+                <div class="project-image">
+                    <img src="img/drilling.jpg" alt="Fire Station Borehole">
+                    <span class="project-category">Boreholes</span>
+                    <span class="project-status">Completed</span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Drilling & Equipping of Fire Station Borehole</h3>
+                    <div class="project-client">Client: Thabazimbi Local Municipality</div>
+                    <div class="project-value">R527,030.04</div>
+                    <div class="project-meta">
+                        <span class="project-year">Completed: Feb 2021</span>
+                        <span class="project-contact">Miss Makhuvha</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">23+</div>
+                <div class="stat-label">Completed Projects</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Ongoing Panel Contract</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">R16M+</div>
+                <div class="stat-label">Total Project Value</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">8+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2 class="cta-title">Have a Project in Mind?</h2>
+        <p class="cta-text">Let's build something great together. Get in touch with our team today.</p>
+        <button class="cta-btn">Start Your Project</button>
+    </section>
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <div class="footer-column footer-about">
+                    <div class="footer-logo">
+                        <img src="logos/mainlogotransp.png" alt="Mudoita Investments">
+                    </div>
+                    <p class="footer-description">
+                        Building excellence since 2016. Professional civil engineering and construction services for commercial and residential projects.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Home</a></li>               
+                       
+                        <li><a href="projects.html"><i class="fas fa-angle-right"></i> Projects</a></li>
+                        <li><a href="contactUs.html"><i class="fas fa-angle-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Bridge Construction</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Pipeline & Sewer</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Electrification</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Project Management</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> HVAC Systems</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Centurion, South Africa</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+27 (0) 123 456 789</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@mudoita.co.za</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Fri: 8:00 AM - 5:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Mudoita Investment (Pty) Ltd. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="Privacy.html">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filter Functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                projectCards.forEach(card => {
+                    const category = card.dataset.category;
+                    
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'block';
+                        card.style.animation = 'none';
+                        setTimeout(() => {
+                            card.style.animation = 'fadeIn 0.6s ease forwards';
+                        }, 10);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Stagger animation on load
+        projectCards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
+    </script>
+</body>
+</html>
