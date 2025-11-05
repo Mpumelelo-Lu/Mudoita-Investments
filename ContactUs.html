@@ -12,25 +12,20 @@
     <section class="top-section">
         <!-- Navigation Bar -->
         <nav class="nav-oval">
-            <!-- Logo -->
             <div class="logo">
                 <img src="logos/mainlogotransp.png" alt="Logo">
             </div>
-
-            <!-- Typing Animation -->
             <div class="typing-container">
                 <span class="typing-text" id="typingText"></span>
                 <span class="cursor">|</span>
             </div>
-
-            <!-- Navigation Links (hidden by default) -->
             <div class="nav-links" id="navLinks">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="ContactUs.html" class="nav-link">Contact Us</a>
                 <a href="projects.html" class="nav-link projects">Projects</a>
+                <a href="Privacy.html" class="nav-link">Privacy Policy</a>
+                <a href="Terms.html" class="nav-link">Terms of Service</a>
             </div>
-
-            <!-- Menu Button -->
             <button class="menu-btn" id="menuBtn">
                 <div class="menu-icon">
                     <span></span>
@@ -306,6 +301,20 @@
                 submitBtn.textContent = 'Send Message';
             }
         });
+
+        // Animate headings and paragraphs on scroll and start
+function animateOnScroll() {
+  const elements = document.querySelectorAll('h1, h2, h3, p');
+  const windowHeight = window.innerHeight;
+  elements.forEach(el => {
+    const position = el.getBoundingClientRect().top;
+    if (position < windowHeight - 50) {
+      el.classList.add('visible');
+    }
+  });
+}
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('DOMContentLoaded', animateOnScroll);
     </script>
 </body>
 </html>

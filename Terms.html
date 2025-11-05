@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Mudoita Investments</title>
+    <link rel="stylesheet" href="css/sytles.css">
+</head>
+<body>
+    <section class="top-section">
+        <nav class="nav-oval">
+            <div class="logo">
+                <img src="https://via.placeholder.com/120x32/87ceeb/1e3a8a?text=LOGO" alt="Logo">
+            </div>
+            <div class="nav-links active" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="ContactUs.html" class="nav-link">Contact Us</a>
+                <a href="projects.html" class="nav-link projects">Projects</a>
+                <a href="Privacy.html" class="nav-link">Privacy Policy</a>
+                <a href="Terms.html" class="nav-link">Terms of Service</a>
+            </div>
+        </nav>
+    </section>
+    <main class="main-content">
+        <section class="company-section">
+            <h1 class="section-title animate-on-scroll">Terms of Service</h1>
+            <div class="company-card animate-on-scroll" style="max-width:800px;margin:2rem auto;">
+                <h2 class="animate-on-scroll">Introduction</h2>
+                <p class="animate-on-scroll">
+                    By accessing or using the Mudoita Investments website and services, you agree to comply with these Terms of Service. Please read them carefully.
+                </p>
+                <h2 class="animate-on-scroll">Use of Site</h2>
+                <p class="animate-on-scroll">
+                    You may use our site for lawful purposes only. You must not use our site in any way that breaches any applicable law or regulation.
+                </p>
+                <h2 class="animate-on-scroll">Intellectual Property</h2>
+                <p class="animate-on-scroll">
+                    All content, trademarks, and logos on this site are the property of Mudoita Investments or its licensors. You may not reproduce, distribute, or use any content without permission.
+                </p>
+                <h2 class="animate-on-scroll">Limitation of Liability</h2>
+                <p class="animate-on-scroll">
+                    Mudoita Investments is not liable for any damages arising from your use of the site or services. All content is provided "as is" without warranties of any kind.
+                </p>
+                <h2 class="animate-on-scroll">Changes to Terms</h2>
+                <p class="animate-on-scroll">
+                    We may update these Terms of Service at any time. Changes will be posted on this page with an updated revision date.
+                </p>
+                <h2 class="animate-on-scroll">Contact</h2>
+                <p class="animate-on-scroll">
+                    For questions about these Terms, contact us at <a href="mailto:info@mudoita.co.za">info@mudoita.co.za</a>.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Mudoita Investment (Pty) Ltd. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="Privacy.html">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="Terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/scrips.js"></script>
+    <script>
+    // Animate headings and paragraphs on scroll and start
+    function animateOnScroll() {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      const windowHeight = window.innerHeight;
+      elements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        if (position < windowHeight - 50) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('DOMContentLoaded', animateOnScroll);
+    </script>
+</body>
+</html>
