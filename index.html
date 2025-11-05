@@ -47,12 +47,12 @@
                 Site Active
             </div>
             
-            <h1>
+            <h1 id="heroMainTitle">
                 Build your project<br>
                 foundation with <span class="highlight">MUDOITA INVESTMENTS</span>
             </h1>
             
-            <p class="subtitle">
+            <p class="subtitle" id="heroMainSubtitle">
                 Professional construction services for commercial and residential projects.<br>
                 <span class="bold-text">Built on quality, delivered on time.</span>
             </p>
@@ -65,6 +65,26 @@
             document.querySelector('.cta-btn').onclick = function() {
                 window.location.href = 'ContactUs.html';
             };
+
+            // Smooth fade-in and slide-up animation for hero title and subtitle
+            window.addEventListener('DOMContentLoaded', function() {
+                var title = document.getElementById('heroMainTitle');
+                var subtitle = document.getElementById('heroMainSubtitle');
+                if (title && subtitle) {
+                    title.style.opacity = 0;
+                    title.style.transform = 'translateY(40px)';
+                    subtitle.style.opacity = 0;
+                    subtitle.style.transform = 'translateY(40px)';
+                    setTimeout(function() {
+                        title.style.transition = 'opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1)';
+                        subtitle.style.transition = 'opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1)';
+                        title.style.opacity = 1;
+                        title.style.transform = 'translateY(0)';
+                        subtitle.style.opacity = 1;
+                        subtitle.style.transform = 'translateY(0)';
+                    }, 200);
+                }
+            });
             </script>
           
         </div>
@@ -125,7 +145,7 @@
 
         <!-- Right: Interactive Values -->
         <div class="values-interactive">
-            <h2 class="values-header">Core Values</h2>
+            <h2 class="values-header" id="coreValuesHeader">Core Values</h2>
             
             <!-- Oval Switch Bar -->
             <div class="values-switch-bar">
@@ -206,6 +226,26 @@ tabs.forEach(tab => {
         });
         document.getElementById(value).classList.add('active');
     });
+});
+
+// Smooth fade-in and slide-up animation for Core Values header
+window.addEventListener('DOMContentLoaded', function() {
+    var coreHeader = document.getElementById('coreValuesHeader');
+    if (coreHeader) {
+        coreHeader.style.opacity = 0;
+        coreHeader.style.transform = 'translateY(40px)';
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    coreHeader.style.transition = 'opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1)';
+                    coreHeader.style.opacity = 1;
+                    coreHeader.style.transform = 'translateY(0)';
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.5 });
+        observer.observe(coreHeader);
+    }
 });
 </script>
 
@@ -515,7 +555,7 @@ tabs.forEach(tab => {
                 <div class="footer-legal">
                     <a href="Privacy.html">Privacy Policy</a>
                     <span class="separator">|</span>
-                    <a href="#">Terms of Service</a>
+                    <a href="Terms.html">Terms of Service</a>
                 </div>
             </div>
         </div>

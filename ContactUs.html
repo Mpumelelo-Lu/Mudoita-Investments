@@ -23,8 +23,7 @@
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="ContactUs.html" class="nav-link">Contact Us</a>
                 <a href="projects.html" class="nav-link projects">Projects</a>
-                <a href="Privacy.html" class="nav-link">Privacy Policy</a>
-                <a href="Terms.html" class="nav-link">Terms of Service</a>
+               
             </div>
             <button class="menu-btn" id="menuBtn">
                 <div class="menu-icon">
@@ -43,17 +42,57 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content">
-            <h1 class="hero-title">Get In Touch</h1>
-            <p class="hero-subtitle">Have a project in mind? We'd love to hear from you. Let's build something great together.</p>
+            <h1 class="hero-title fade-in-up" id="heroTitle">Get In Touch</h1>
+            <p class="hero-subtitle fade-in-up" id="heroSubtitle">Have a project in mind? We'd love to hear from you. Let's build something great together.</p>
         </div>
     </section>
+
+    <!-- Interactive Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header" id="chatHeader">
+            <div class="chat-avatar">
+                <i class="fas fa-headset"></i>
+            </div>
+            <div class="chat-title">
+                <h4>Quick Help</h4>
+                <span class="chat-status">Online</span>
+            </div>
+            <button class="chat-toggle" id="chatToggle">
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-message bot">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Hi! I'm here to help. Choose a topic below or type your question:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-quick-questions">
+                <button class="quick-btn" data-question="pricing">💰 Pricing & Quotes</button>
+                <button class="quick-btn" data-question="services">🔧 Our Services</button>
+                <button class="quick-btn" data-question="timeline">⏰ Project Timeline</button>
+                <button class="quick-btn" data-question="contact">📞 Contact Info</button>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Type your message..." class="chat-input">
+                <button id="chatSend" class="chat-send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section class="contact-section">
         <div class="contact-grid">
             <!-- Contact Info -->
             <div class="contact-info">
-                <div class="info-card">
+                <div class="info-card fade-in-up" data-delay="100">
                     <div class="info-header">
                         <div class="info-icon"><i class="fas fa-map-marker-alt" style="color: #fff;"></i></div>
                         <h3 class="info-title">Our Location</h3>
@@ -64,7 +103,7 @@
                     </div>
                 </div>
 
-                <div class="info-card">
+                <div class="info-card fade-in-up" data-delay="200">
                     <div class="info-header">
                         <div class="info-icon"><i class="fas fa-envelope" style="color: #fff;"></i></div>
                         <h3 class="info-title">Email Us</h3>
@@ -75,7 +114,7 @@
                     </div>
                 </div>
 
-                <div class="info-card">
+                <div class="info-card fade-in-up" data-delay="300">
                     <div class="info-header">
                         <div class="info-icon"><i class="fas fa-phone" style="color: #fff;"></i></div>
                         <h3 class="info-title">Call Us</h3>
@@ -86,7 +125,7 @@
                     </div>
                 </div>
 
-                <div class="info-card">
+                <div class="info-card fade-in-up" data-delay="400">
                     <div class="info-header">
                         <div class="info-icon"><i class="fas fa-clock" style="color: #fff;"></i></div>
                         <h3 class="info-title">Business Hours</h3>
@@ -100,7 +139,7 @@
             </div>
 
             <!-- Contact Form -->
-            <div class="form-container">
+            <div class="form-container fade-in-up" data-delay="500">
                 <h2 class="form-title">Send Us a Message</h2>
                 <p class="form-subtitle">Fill out the form below and we'll get back to you shortly.</p>
 
@@ -157,9 +196,9 @@
                         <textarea id="message" name="message" class="form-textarea" required></textarea>
                     </div>
 
-                    <!-- Replace form submit with mailto link -->
+                    <!-- Enhanced email system -->
                     <div style="margin-top:2rem;text-align:center;">
-                      <a href="mailto:info@mudoita.co.za?subject=Contact%20Form&body=Please%20enter%20your%20message%20here" class="cta-btn" style="display:inline-block;">Send Email</a>
+                      <button type="button" id="sendEmailBtn" class="cta-btn" style="display:inline-block;">Send Message</button>
                     </div>
                 </form>
             </div>
@@ -238,7 +277,7 @@
                 <div class="footer-legal">
                     <a href="Privacy.html">Privacy Policy</a>
                     <span class="separator">|</span>
-                    <a href="#">Terms of Service</a>
+                    <a href="Terms.html">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -246,75 +285,197 @@
 
   
 
+    <!-- Contact Page Animations and Chat System -->
     <script>
-        // Form Submission
-        const contactForm = document.getElementById('contactForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const successMessage = document.getElementById('successMessage');
-        const errorMessage = document.getElementById('errorMessage');
-
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            // Disable submit button
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-
-            // Hide previous messages
-            successMessage.classList.remove('show');
-            errorMessage.classList.remove('show');
-
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = Object.fromEntries(formData);
-
-            try {
-                // Send POST request to your server endpoint
-                const response = await fetch('/api/contact', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
-                });
-
-                if (response.ok) {
-                    // Show success message
-                    successMessage.classList.add('show');
-                    contactForm.reset();
-                    
-                    // Scroll to success message
-                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                } else {
-                    throw new Error('Failed to send message');
-                }
-            } catch (error) {
-                // Show error message
-                errorMessage.classList.add('show');
-                console.error('Error:', error);
+        // Smooth animations on scroll and page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hero animations
+            const heroTitle = document.getElementById('heroTitle');
+            const heroSubtitle = document.getElementById('heroSubtitle');
+            
+            if (heroTitle && heroSubtitle) {
+                setTimeout(() => {
+                    heroTitle.style.opacity = '1';
+                    heroTitle.style.transform = 'translateY(0)';
+                }, 200);
                 
-                // Scroll to error message
-                errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            } finally {
-                // Re-enable submit button
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Send Message';
+                setTimeout(() => {
+                    heroSubtitle.style.opacity = '1';
+                    heroSubtitle.style.transform = 'translateY(0)';
+                }, 400);
+            }
+
+            // Scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const delay = entry.target.dataset.delay || 0;
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, delay);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Chat System
+        const chatWidget = document.getElementById('chatWidget');
+        const chatToggle = document.getElementById('chatToggle');
+        const chatBody = document.getElementById('chatBody');
+        const chatMessages = document.getElementById('chatMessages');
+        const chatInput = document.getElementById('chatInput');
+        const chatSend = document.getElementById('chatSend');
+        const quickBtns = document.querySelectorAll('.quick-btn');
+
+        // Chat responses database
+        const chatResponses = {
+            pricing: {
+                title: "💰 Pricing & Quotes",
+                response: "Our pricing varies based on project scope and requirements. We offer competitive rates and provide detailed quotes. For accurate pricing, please contact us at info@mudoita.co.za or call +27 12 345 6789. We'll schedule a consultation to discuss your specific needs."
+            },
+            services: {
+                title: "🔧 Our Services",
+                response: "We offer comprehensive construction services including:<br>• Bridge Construction<br>• Boreholes & Water Systems<br>• VIP Toilets & Sanitation<br>• Pipeline & Sewer Systems<br>• Electrification<br>• HVAC Systems<br>• Project Management<br>• Site Management"
+            },
+            timeline: {
+                title: "⏰ Project Timeline",
+                response: "Project timelines depend on scope and complexity. Typical timelines:<br>• Small projects: 2-4 weeks<br>• Medium projects: 1-3 months<br>• Large infrastructure: 3-12 months<br><br>We provide detailed project schedules during the planning phase and maintain regular progress updates."
+            },
+            contact: {
+                title: "📞 Contact Information",
+                response: "📍 Location: Centurion, Gauteng, South Africa<br>📧 Email: info@mudoita.co.za<br>📧 Projects: projects@mudoita.co.za<br>📞 Office: +27 12 345 6789<br>📱 Mobile: +27 82 345 6789<br>🕒 Hours: Mon-Fri 8AM-5PM, Sat 9AM-1PM"
+            }
+        };
+
+        // Toggle chat
+        chatToggle.addEventListener('click', () => {
+            const isOpen = chatBody.style.display === 'block';
+            chatBody.style.display = isOpen ? 'none' : 'block';
+            chatToggle.querySelector('i').className = isOpen ? 'fas fa-chevron-down' : 'fas fa-chevron-up';
+        });
+
+        // Quick question buttons
+        quickBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const question = btn.dataset.question;
+                const response = chatResponses[question];
+                if (response) {
+                    addMessage('user', response.title);
+                    setTimeout(() => {
+                        addMessage('bot', response.response);
+                    }, 500);
+                }
+            });
+        });
+
+        // Send message
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (message) {
+                addMessage('user', message);
+                chatInput.value = '';
+                
+                setTimeout(() => {
+                    const botResponse = getBotResponse(message);
+                    addMessage('bot', botResponse);
+                }, 800);
+            }
+        }
+
+        chatSend.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
             }
         });
 
-        // Animate headings and paragraphs on scroll and start
-function animateOnScroll() {
-  const elements = document.querySelectorAll('h1, h2, h3, p');
-  const windowHeight = window.innerHeight;
-  elements.forEach(el => {
-    const position = el.getBoundingClientRect().top;
-    if (position < windowHeight - 50) {
-      el.classList.add('visible');
-    }
-  });
-}
-window.addEventListener('scroll', animateOnScroll);
-window.addEventListener('DOMContentLoaded', animateOnScroll);
+        // Add message to chat
+        function addMessage(sender, message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chat-message ${sender}`;
+            
+            const avatar = sender === 'bot' ? 
+                '<div class="message-avatar"><i class="fas fa-robot"></i></div>' :
+                '<div class="message-avatar"><i class="fas fa-user"></i></div>';
+            
+            messageDiv.innerHTML = `
+                ${avatar}
+                <div class="message-content">
+                    <p>${message}</p>
+                </div>
+            `;
+            
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Simple bot response logic
+        function getBotResponse(message) {
+            const msg = message.toLowerCase();
+            
+            if (msg.includes('price') || msg.includes('cost') || msg.includes('quote')) {
+                return chatResponses.pricing.response;
+            } else if (msg.includes('service') || msg.includes('what do you do')) {
+                return chatResponses.services.response;
+            } else if (msg.includes('time') || msg.includes('how long') || msg.includes('duration')) {
+                return chatResponses.timeline.response;
+            } else if (msg.includes('contact') || msg.includes('phone') || msg.includes('email')) {
+                return chatResponses.contact.response;
+            } else if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey')) {
+                return "Hello! Thanks for reaching out to Mudoita Investments. How can I help you today? You can ask about our services, pricing, project timelines, or contact information.";
+            } else {
+                return "Thank you for your message! For specific inquiries, please contact us directly at info@mudoita.co.za or +27 12 345 6789. Our team will get back to you within 24 hours.";
+            }
+        }
+
+        // Enhanced email system
+        document.getElementById('sendEmailBtn').addEventListener('click', function() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const company = document.getElementById('company').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // Basic validation
+            if (!firstName || !lastName || !email || !subject || !message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Create detailed email body
+            let emailBody = `Contact Form Submission\n\n`;
+            emailBody += `Name: ${firstName} ${lastName}\n`;
+            emailBody += `Email: ${email}\n`;
+            if (phone) emailBody += `Phone: ${phone}\n`;
+            if (company) emailBody += `Company: ${company}\n`;
+            emailBody += `Subject: ${subject}\n\n`;
+            emailBody += `Message:\n${message}\n\n`;
+            emailBody += `---\nSent from Mudoita Investments Contact Form`;
+
+            // Create mailto link
+            const mailtoLink = `mailto:info@mudoita.co.za?subject=${encodeURIComponent('Contact Form: ' + subject)}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            setTimeout(() => {
+                alert('Your email client has been opened with the message. Please send the email to complete your inquiry.');
+            }, 500);
+        });
     </script>
 </body>
 </html>
