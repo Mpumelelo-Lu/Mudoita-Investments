@@ -332,3 +332,51 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Hero section smooth animations
+window.addEventListener('DOMContentLoaded', function() {
+    const title = document.querySelector('.hero h1');
+    const subtitle = document.querySelector('.hero-subtitle');
+    const actions = document.querySelector('.hero-actions');
+    const trustIndicators = document.querySelector('.trust-indicators');
+    
+    if (title) {
+        title.style.opacity = 0;
+        title.style.transform = 'translateY(40px)';
+        setTimeout(function() {
+            title.style.transition = 'opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1)';
+            title.style.opacity = 1;
+            title.style.transform = 'translateY(0)';
+        }, 100);
+    }
+    
+    if (subtitle) {
+        subtitle.style.opacity = 0;
+        subtitle.style.transform = 'translateY(40px)';
+        setTimeout(function() {
+            subtitle.style.transition = 'opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1)';
+            subtitle.style.opacity = 1;
+            subtitle.style.transform = 'translateY(0)';
+        }, 200);
+    }
+    
+    if (actions) {
+        actions.style.opacity = 0;
+        actions.style.transform = 'translateY(40px)';
+        setTimeout(function() {
+            actions.style.transition = 'opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1)';
+            actions.style.opacity = 1;
+            actions.style.transform = 'translateY(0)';
+        }, 300);
+    }
+    
+    if (trustIndicators) {
+        trustIndicators.style.opacity = 0;
+        trustIndicators.style.transform = 'translateY(40px)';
+        setTimeout(function() {
+            trustIndicators.style.transition = 'opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1)';
+            trustIndicators.style.opacity = 1;
+            trustIndicators.style.transform = 'translateY(0)';
+        }, 400);
+    }
+});

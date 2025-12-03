@@ -42,51 +42,82 @@
 
         <!-- Hero Content -->
         <div class="hero">
-            <div class="status-badge">
-                <span class="pulse-dot"></span>
-                Site Active
-            </div>
-            
-            <h1 id="heroMainTitle">
-                Build your project<br>
-                foundation with <span class="highlight">MUDOITA INVESTMENT</span>
-            </h1>
-            
-            <p class="subtitle" id="heroMainSubtitle">
-                Professional construction services for commercial and residential projects.<br>
-                <span class="bold-text">Built on quality, delivered on time.</span>
-            </p>
-            
-            <button class="cta-btn">
-                Get Started
-                <span class="arrow">→</span>
-            </button>
-            <script>
-            document.querySelector('.cta-btn').onclick = function() {
-                window.location.href = 'ContactUs.html';
-            };
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="status-badge">
+                        <span class="pulse-dot"></span>
+                        Site Active
+                    </div>
+                    
+                    <h1>
+                        Build your project<br>
+                        foundation with <span class="highlight">MUDOITA INVESTMENT</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        Professional construction services for commercial and residential projects.<br>
+                        <span class="bold-text">Built on quality, delivered on time.</span>
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" onclick="window.location.href='ContactUs.html'">
+                            Get Started
+                            <span class="arrow-icon">→</span>
+                        </button>
+                        <button class="btn btn-secondary" onclick="window.location.href='projects.html'">
+                            View Our Work
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
 
-            // Smooth fade-in and slide-up animation for hero title and subtitle
-            window.addEventListener('DOMContentLoaded', function() {
-                var title = document.getElementById('heroMainTitle');
-                var subtitle = document.getElementById('heroMainSubtitle');
-                if (title && subtitle) {
-                    title.style.opacity = 0;
-                    title.style.transform = 'translateY(40px)';
-                    subtitle.style.opacity = 0;
-                    subtitle.style.transform = 'translateY(40px)';
-                    setTimeout(function() {
-                        title.style.transition = 'opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1)';
-                        subtitle.style.transition = 'opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1)';
-                        title.style.opacity = 1;
-                        title.style.transform = 'translateY(0)';
-                        subtitle.style.opacity = 1;
-                        subtitle.style.transform = 'translateY(0)';
-                    }, 200);
-                }
-            });
-            </script>
-          
+                    <!-- Trust Indicators -->
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <div class="trust-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="trust-text">
+                                <strong>100% Black Owned</strong>
+                                Level 1 B-BBEE
+                            </div>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="trust-text">
+                                <strong>9+ Years</strong>
+                                Industry Experience
+                            </div>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="trust-text">
+                                <strong>Safety First</strong>
+                                Certified Standards
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="hero-image-main">
+                        <img src="img/bridge.jpg" alt="Construction Project">
+                    </div>
+                    
+                    <div class="floating-stat stat-1">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    
+                    <div class="floating-stat stat-2">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 <!--about section-->
