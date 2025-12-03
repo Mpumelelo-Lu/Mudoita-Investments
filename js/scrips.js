@@ -62,22 +62,41 @@ const heroSubtitles = [
 ];
 let heroIndex = 0;
 function swapHeroSection() {
-    const titleEl = document.getElementById('heroTitle');
-    const subtitleEl = document.getElementById('heroSubtitle');
+    const titleEl = document.getElementById('heroSectionTitle');
+    const subtitleEl = document.getElementById('heroSectionSubtitle');
     if (titleEl && subtitleEl) {
-        // Fade out
-        titleEl.style.opacity = 0;
-        subtitleEl.style.opacity = 0;
+        // Add smooth transition if not already set
+        if (!titleEl.style.transition) {
+            titleEl.style.transition = 'opacity 0.6s ease-in-out, transform 0.6s ease-in-out';
+            subtitleEl.style.transition = 'opacity 0.6s ease-in-out, transform 0.6s ease-in-out';
+        }
+        
+        // Fade out with slide
+        titleEl.style.opacity = '0';
+        titleEl.style.transform = 'translateY(-20px)';
+        subtitleEl.style.opacity = '0';
+        subtitleEl.style.transform = 'translateY(-20px)';
+        
         setTimeout(() => {
             // Change text
             titleEl.textContent = heroTitles[heroIndex];
             subtitleEl.textContent = heroSubtitles[heroIndex];
-            // Fade in
-            titleEl.style.opacity = 1;
-            subtitleEl.style.opacity = 1;
+            
+            // Reset position for fade in
+            titleEl.style.transform = 'translateY(20px)';
+            subtitleEl.style.transform = 'translateY(20px)';
+            
+            // Trigger fade in with slide
+            setTimeout(() => {
+                titleEl.style.opacity = '1';
+                titleEl.style.transform = 'translateY(0)';
+                subtitleEl.style.opacity = '1';
+                subtitleEl.style.transform = 'translateY(0)';
+            }, 50);
+            
             // Next index
             heroIndex = (heroIndex + 1) % heroTitles.length;
-        }, 400);
+        }, 600);
     }
 }
 setInterval(swapHeroSection, 10000);

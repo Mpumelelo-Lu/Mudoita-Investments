@@ -573,7 +573,7 @@ body {
 
 h1 {
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: 800;
     color: #1e3a8a;
     line-height: 1.15;
     margin-bottom: 1.2rem;
@@ -813,6 +813,24 @@ h1 {
             font-size: 1.2rem;
             opacity: 0.95;
             font-weight: 400;
+        }
+
+        /* Unique styles for hero-section "Building Trust" area */
+        .hero-section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .hero-section-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            font-weight: 400;
+            color: #ffffff;
+            text-align: center;
         }
 
         /* Main Content */
