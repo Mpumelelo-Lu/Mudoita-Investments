@@ -5,34 +5,36 @@ let charIndex = 0;
 let isDeleting = false;
 const typingText = document.getElementById('typingText');
 
-function type() {
-    const currentWord = words[wordIndex];
-    
-    if (isDeleting) {
-        typingText.textContent = currentWord.substring(0, charIndex - 1);
-        charIndex--;
+if (typingText) {
+    function type() {
+        const currentWord = words[wordIndex];
         
-        if (charIndex === 0) {
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            setTimeout(type, 500);
+        if (isDeleting) {
+            typingText.textContent = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+            
+            if (charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                setTimeout(type, 500);
+            } else {
+                setTimeout(type, 100);
+            }
         } else {
-            setTimeout(type, 100);
-        }
-    } else {
-        typingText.textContent = currentWord.substring(0, charIndex + 1);
-        charIndex++;
-        
-        if (charIndex === currentWord.length) {
-            isDeleting = true;
-            setTimeout(type, 2000);
-        } else {
-            setTimeout(type, 150);
+            typingText.textContent = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+            
+            if (charIndex === currentWord.length) {
+                isDeleting = true;
+                setTimeout(type, 2000);
+            } else {
+                setTimeout(type, 150);
+            }
         }
     }
-}
 
-type();
+    type();
+}
 
 // Scroll Progress Bar
 window.addEventListener('scroll', () => {
@@ -155,6 +157,58 @@ if (cardsWrapper && navDots.length) {
     });
 }
 
+// Foundation Cards Navigation
+const cardDots = document.querySelectorAll('.card-dot');
+
+if (cardDots.length) {
+    cardDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            // Remove active class from all dots
+            cardDots.forEach(d => d.classList.remove('active'));
+            // Add active class to clicked dot
+            dot.classList.add('active');
+            
+            // Scroll to corresponding card
+            const cards = document.querySelectorAll('.company-card');
+            if (cards[index]) {
+                cards[index].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+        });
+    });
+
+    // Update active dot on scroll
+    const cardsContainer = document.querySelector('.cards-wrapper');
+    if (cardsContainer) {
+        let scrollTimeout;
+        cardsContainer.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const scrollLeft = cardsContainer.scrollLeft;
+                const cards = Array.from(cardsContainer.querySelectorAll('.company-card'));
+                let activeIndex = 0;
+                
+                cards.forEach((card, index) => {
+                    const cardLeft = card.offsetLeft - cardsContainer.offsetLeft;
+                    const cardCenter = cardLeft + (card.offsetWidth / 2);
+                    const scrollCenter = scrollLeft + (cardsContainer.offsetWidth / 2);
+                    
+                    if (Math.abs(cardCenter - scrollCenter) < card.offsetWidth / 2) {
+                        activeIndex = index;
+                    }
+                });
+                
+                cardDots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === activeIndex);
+                });
+            }, 100);
+        });
+    }
+}
+
 // Core Values Tab Switching
 const valueTabs = document.querySelectorAll('.value-tab');
 const valueCards = document.querySelectorAll('.value-card');
@@ -216,40 +270,52 @@ if (objectivesSection && objectiveNumbers.length) {
     observer.observe(objectivesSection);
 }
 
-// Mobile Navigation Toggle
-const menuBtn = document.getElementById('menuBtn');
-const navLinks = document.getElementById('navLinks');
+// Mobile Navigation Toggle (supports multiple nav instances)
+document.addEventListener('DOMContentLoaded', function() {
+    const navSections = document.querySelectorAll('.nav-oval');
+    
+    navSections.forEach(nav => {
+        const navLinks = nav.querySelector('.nav-links');
+        const menuBtn = nav.querySelector('.menu-btn');
 
-if (menuBtn && navLinks) {
-    menuBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        navLinks.classList.toggle('active');
-        menuBtn.classList.toggle('active');
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!navLinks.contains(e.target) && !menuBtn.contains(e.target) && navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
-            menuBtn.classList.remove('active');
+        if (!navLinks || !menuBtn) {
+            return;
         }
-    });
-    
-    // Close menu when clicking a link
-    const navLinksItems = navLinks.querySelectorAll('.nav-link');
-    navLinksItems.forEach(link => {
-        link.addEventListener('click', () => {
+
+        const closeMenu = () => {
             navLinks.classList.remove('active');
             menuBtn.classList.remove('active');
+        };
+
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+        });
+
+        navLinks.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!nav.contains(event.target)) {
+                closeMenu();
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) {
+                closeMenu();
+            }
         });
     });
-}
+});
 
 // ====== SERVICES SLIDER ======
 const servicesSlider = document.getElementById('servicesSlider');
 const prevServiceBtn = document.getElementById('prevService');
 const nextServiceBtn = document.getElementById('nextService');
-const progressFill = document.getElementById('progressFill');
+const servicesProgressFill = document.getElementById('progressFill');
 const currentSlideSpan = document.getElementById('currentSlide');
 const totalSlidesSpan = document.getElementById('totalSlides');
 
@@ -275,9 +341,9 @@ if (servicesSlider) {
         });
         
         // Update progress bar
-        if (progressFill) {
+        if (servicesProgressFill) {
             const progress = ((currentSlide + 1) / totalSlides) * 100;
-            progressFill.style.width = progress + '%';
+            servicesProgressFill.style.width = progress + '%';
         }
         
         // Update counter
@@ -317,9 +383,9 @@ if (servicesSlider) {
             currentSlide = Math.round(scrollLeft / (cardWidth + gap));
             
             // Update progress bar
-            if (progressFill) {
+            if (servicesProgressFill) {
                 const progress = ((currentSlide + 1) / totalSlides) * 100;
-                progressFill.style.width = progress + '%';
+                servicesProgressFill.style.width = progress + '%';
             }
             
             // Update counter

@@ -831,6 +831,63 @@ h1 {
             font-weight: 400;
             color: #ffffff;
             text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Additional Content with Icons */
+        .hero-additional-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .additional-item {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .additional-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .additional-icon {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #87ceeb, #5eb8e5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .additional-text h4 {
+            margin: 0 0 0.3rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .additional-text p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.4;
         }
 
         /* Main Content */
@@ -918,6 +975,89 @@ h1 {
             color: #1e3a8a;
             font-size: 0.95rem;
             line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        /* Enhanced Card Elements */
+        .card-highlights {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .highlight-badge {
+            background: linear-gradient(135deg, #87ceeb, #5eb8e5);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(135, 206, 235, 0.3);
+        }
+
+        .card-stats {
+            margin-top: 1rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 0.75rem;
+            background: linear-gradient(135deg, rgba(135, 206, 250, 0.1), rgba(30, 58, 138, 0.05));
+            border-radius: 8px;
+            border: 1px solid rgba(135, 206, 250, 0.2);
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            line-height: 1;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.85rem;
+            color: #87ceeb;
+            font-weight: 600;
+            margin-top: 0.25rem;
+        }
+
+        .achievement-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 0;
+        }
+
+        .achievement-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #1e3a8a;
+        }
+
+        .achievement-list li i {
+            color: #87ceeb;
+            margin-right: 0.5rem;
+            font-size: 0.8rem;
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .service-tag {
+            background: rgba(135, 206, 250, 0.1);
+            color: #1e3a8a;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid rgba(135, 206, 250, 0.3);
         }
 
         .cards-nav {
@@ -941,6 +1081,24 @@ h1 {
             background: #1e3a8a;
             width: 24px;
             border-radius: 4px;
+        }
+
+        .card-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(135, 206, 250, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card-dot.active {
+            background: #87ceeb;
+            transform: scale(1.2);
+        }
+
+        .card-dot:hover {
+            background: #5eb8e5;
         }
 
         /* Core Values Section - Split Layout */
@@ -976,6 +1134,34 @@ h1 {
             background: 
                 linear-gradient(135deg, rgba(135, 206, 250, 0.3), rgba(30, 58, 138, 0.2)),
                 url('../img/safety.jpg') center/cover;
+        }
+
+        /* Loading Spinner */
+        .loading-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(135, 206, 250, 0.3);
+            border-top: 4px solid #87ceeb;
+            border-radius: 50%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .loading-spinner.show {
+            opacity: 1;
+            visibility: visible;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
         }
 
         /* Right Side - Interactive Values */
@@ -1202,6 +1388,32 @@ h1 {
 
             .hero-subtitle {
                 font-size: 1rem;
+            }
+
+            /* Additional content mobile styles */
+            .hero-additional-content {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                margin-top: 1.5rem;
+            }
+
+            .additional-item {
+                padding: 1rem;
+            }
+
+            .additional-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+                margin-right: 0.8rem;
+            }
+
+            .additional-text h4 {
+                font-size: 1rem;
+            }
+
+            .additional-text p {
+                font-size: 0.85rem;
             }
 
             .main-content {
@@ -2069,5 +2281,246 @@ line-height: 1.6;
     .quote-btn {
         padding: 1rem 2.5rem;
         font-size: 1rem;
+    }
+}
+
+/* Mobile Responsive Styles for Foundation Section */
+@media (max-width: 768px) {
+    .hero-additional-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .additional-item {
+        padding: 1.5rem;
+    }
+
+    .additional-item h3 {
+        font-size: 1.25rem;
+    }
+
+    .additional-item p {
+        font-size: 0.9rem;
+    }
+
+    .company-cards {
+        padding: 1rem;
+    }
+
+    .company-card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .company-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .card-description {
+        font-size: 0.9rem;
+    }
+
+    .card-highlights {
+        flex-wrap: wrap;
+    }
+
+    .highlight-badge {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    .achievement-list li {
+        font-size: 0.85rem;
+    }
+
+    .service-tags {
+        gap: 0.4rem;
+    }
+
+    .service-tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.4rem;
+    }
+
+    .cards-nav {
+        gap: 0.4rem;
+        margin-top: 1.5rem;
+    }
+
+    .card-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .loading-spinner {
+        width: 30px;
+        height: 30px;
+        border-width: 3px;
+    }
+}
+
+/* Privacy Policy Styles */
+.privacy-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #87ceeb;
+    transition: all 0.3s ease;
+}
+
+.privacy-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.privacy-card .card-icon-header {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #87ceeb, #1e3a8a);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.privacy-section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+.privacy-text {
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.privacy-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.privacy-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.privacy-item i {
+    color: #87ceeb;
+    margin-top: 0.1rem;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.security-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.security-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, rgba(135, 206, 250, 0.1), rgba(30, 58, 138, 0.05));
+    color: #1e3a8a;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(135, 206, 250, 0.2);
+}
+
+.security-badge i {
+    color: #87ceeb;
+}
+
+.contact-card {
+    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    border-left-color: #1e3a8a;
+}
+
+.contact-info {
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: #475569;
+}
+
+.contact-item i {
+    color: #87ceeb;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.contact-item a {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #87ceeb;
+}
+
+/* Mobile Responsive for Privacy Policy */
+@media (max-width: 768px) {
+    .privacy-card {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .privacy-card .card-icon-header {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+    }
+
+    .privacy-section-title {
+        font-size: 1.2rem;
+    }
+
+    .privacy-text {
+        font-size: 0.95rem;
+    }
+
+    .privacy-item {
+        font-size: 0.9rem;
+    }
+
+    .security-features {
+        gap: 0.5rem;
+    }
+
+    .security-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
     }
 }

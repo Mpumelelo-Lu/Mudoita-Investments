@@ -39,26 +39,117 @@
                 </div>
             </button>
         </nav>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
     </section>
 
      <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content">
-            <h1 class="hero-title">Our Projects</h1>
-            <p class="hero-subtitle">Delivering excellence across South Africa since 2016</p>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="status-badge">
+                        <span class="pulse-dot"></span>
+                        Site Active
+                    </div>
+
+                    <h1>
+                        Our <span class="highlight">Projects</span><br>
+                        Building Excellence Since 2016
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Explore our portfolio of successful civil engineering and construction projects across South Africa.<br>
+                        <span class="bold-text">Quality Work, Proven Results, Satisfied Clients.</span>
+                    </p>
+
+                    <!-- Trust Indicators -->
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <div class="trust-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="trust-text">
+                                <strong>23+ Projects</strong>
+                                Successfully Completed
+                            </div>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div class="trust-text">
+                                <strong>Multi-Province</strong>
+                                Service Coverage
+                            </div>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="trust-text">
+                                <strong>98% Satisfaction</strong>
+                                Client Rating
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="hero-image-main">
+                        <img src="logos/main2.png" alt="Construction Projects" style="width: 80%; height: auto; display: block; margin: 0 auto;">
+                    </div>
+
+                    <div class="floating-stat stat-1">
+                        <div class="stat-number">R16M+</div>
+                        <div class="stat-label">Project Value</div>
+                    </div>
+
+                    <div class="floating-stat stat-2">
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Filter Section -->
     <section class="filter-section">
         <div class="filter-container">
-            <span class="filter-label">Filter by:</span>
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="boreholes">Boreholes</button>
-            <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
-            <button class="filter-btn" data-filter="sanitation">Sanitation</button>
-            <button class="filter-btn" data-filter="construction">Construction</button>
-            <button class="filter-btn" data-filter="supply">Supply</button>
+            <div class="filter-header">
+                <i class="fas fa-filter"></i>
+                <span class="filter-label">Filter Projects by Category:</span>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th-large"></i>
+                    All Projects
+                </button>
+                <button class="filter-btn" data-filter="boreholes">
+                    <i class="fas fa-tint"></i>
+                    Boreholes
+                </button>
+                <button class="filter-btn" data-filter="infrastructure">
+                    <i class="fas fa-road"></i>
+                    Infrastructure
+                </button>
+                <button class="filter-btn" data-filter="sanitation">
+                    <i class="fas fa-toilet"></i>
+                    Sanitation
+                </button>
+                <button class="filter-btn" data-filter="construction">
+                    <i class="fas fa-tools"></i>
+                    Construction
+                </button>
+                <button class="filter-btn" data-filter="supply">
+                    <i class="fas fa-box"></i>
+                    Supply
+                </button>
+            </div>
         </div>
     </section>
 
@@ -69,8 +160,10 @@
             <div class="project-card" data-category="infrastructure">
                 <div class="project-image">
                     <img src="img/actualsandriver.jpg" alt="Sandriver Package Plant">
-                    <span class="project-category">Infrastructure</span>
-                    <span class="project-status">Completed</span>
+                    <span class="project-badge" data-status="completed">
+                        <span class="badge-label">Infrastructure</span>
+                        <span class="badge-status">Completed</span>
+                    </span>
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">Upgrading of Sandriver Package Plant Phase 1</h3>
@@ -87,8 +180,10 @@
             <div class="project-card" data-category="boreholes">
                 <div class="project-image">
                     <img src="img/sandriver.jpg" alt="Borehole Project">
-                    <span class="project-category">Boreholes</span>
-                    <span class="project-status in-progress">In Progress</span>
+                    <span class="project-badge" data-status="in-progress">
+                        <span class="badge-label">Boreholes</span>
+                        <span class="badge-status">In Progress</span>
+                    </span>
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">Supply, Refurbishment & Drilling of New Boreholes (3-Year Panel)</h3>
@@ -105,8 +200,10 @@
             <div class="project-card" data-category="boreholes">
                 <div class="project-image">
                     <img src="img/boreholes.jpg" alt="Borehole Rehabilitation">
-                    <span class="project-category">Boreholes</span>
-                    <span class="project-status">Completed</span>
+                    <span class="project-badge" data-status="completed">
+                        <span class="badge-label">Boreholes</span>
+                        <span class="badge-status">Completed</span>
+                    </span>
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">Rehabilitation, Maintenance & Drilling of Boreholes</h3>
@@ -123,8 +220,10 @@
             <div class="project-card" data-category="boreholes">
                 <div class="project-image">
                     <img src="img/construct.jpg" alt="Water Reticulation">
-                    <span class="project-category">Water Infrastructure</span>
-                    <span class="project-status">Completed</span>
+                    <span class="project-badge" data-status="completed">
+                        <span class="badge-label">Water Infrastructure</span>
+                        <span class="badge-status">Completed</span>
+                    </span>
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">Borehole Refurbishment, Rising Main & Water Reticulation - Dzingidzingi</h3>
@@ -141,8 +240,10 @@
             <div class="project-card" data-category="boreholes">
                 <div class="project-image">
                     <img src="img/niceborehole.jpg" alt="Borehole Refurbishment">
-                    <span class="project-category">Boreholes</span>
-                    <span class="project-status">Completed</span>
+                    <span class="project-badge" data-status="completed">
+                        <span class="badge-label">Boreholes</span>
+                        <span class="badge-status">Completed</span>
+                    </span>
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">Refurbishment of Existing Boreholes</h3>
@@ -159,8 +260,10 @@
             <div class="project-card" data-category="construction">
                 <div class="project-image">
                     <img src="img/maintenace.jpg" alt="School Building">
-                    <span class="project-category">Construction</span>
-                    <span class="project-status">Completed</span>
+                    <span class="project-badge" data-status="completed">
+                        <span class="badge-label">Construction</span>
+                        <span class="badge-status">Completed</span>
+                    </span>
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">Repairs & Renovation of Admin Block, 8 Classrooms & Science Lab</h3>
@@ -177,8 +280,10 @@
             <div class="project-card" data-category="sanitation">
                 <div class="project-image">
                     <img src="img/pipes.jpg" alt="Sewer Treatment">
-                    <span class="project-category">Sanitation</span>
-                    <span class="project-status">Completed</span>
+                    <span class="project-badge" data-status="completed">
+                        <span class="badge-label">Sanitation</span>
+                        <span class="badge-status">Completed</span>
+                    </span>
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">Mtwalume Sewer Treatment Works</h3>
@@ -195,8 +300,10 @@
             <div class="project-card" data-category="boreholes">
                 <div class="project-image">
                     <img src="img/borehole3.jpg" alt="Borehole Drilling">
-                    <span class="project-category">Boreholes</span>
-                    <span class="project-status">Completed</span>
+                    <span class="project-badge" data-status="completed">
+                        <span class="badge-label">Boreholes</span>
+                        <span class="badge-status">Completed</span>
+                    </span>
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">Drilling & Equipping of Boreholes (Ward 12 & 13)</h3>
@@ -213,8 +320,10 @@
             <div class="project-card" data-category="sanitation">
                 <div class="project-image">
                     <img src="img/toiletconstruct.jpg" alt="VIP Toilets">
-                    <span class="project-category">Sanitation</span>
-                    <span class="project-status">Completed</span>
+                    <span class="project-badge" data-status="completed">
+                        <span class="badge-label">Sanitation</span>
+                        <span class="badge-status">Completed</span>
+                    </span>
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">Construction of VIP Toilets (Ward 4)</h3>
@@ -231,8 +340,10 @@
             <div class="project-card" data-category="sanitation">
                 <div class="project-image">
                     <img src="img/toilets.jpg" alt="VIP Toilets Installation">
-                    <span class="project-category">Sanitation</span>
-                    <span class="project-status">Completed</span>
+                    <span class="project-badge" data-status="completed">
+                        <span class="badge-label">Sanitation</span>
+                        <span class="badge-status">Completed</span>
+                    </span>
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">Installation of VIP Toilets (Ward 8)</h3>
@@ -249,8 +360,10 @@
             <div class="project-card" data-category="infrastructure">
                 <div class="project-image">
                     <img src="img/safety.jpg" alt="Road Construction">
-                    <span class="project-category">Infrastructure</span>
-                    <span class="project-status">Completed</span>
+                    <span class="project-badge" data-status="completed">
+                        <span class="badge-label">Infrastructure</span>
+                        <span class="badge-status">Completed</span>
+                    </span>
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">Internal Access Road & Bridge (Sewer & Stormwater Works)</h3>
@@ -267,8 +380,10 @@
             <div class="project-card" data-category="boreholes">
                 <div class="project-image">
                     <img src="img/drilling.jpg" alt="Fire Station Borehole">
-                    <span class="project-category">Boreholes</span>
-                    <span class="project-status">Completed</span>
+                    <span class="project-badge" data-status="completed">
+                        <span class="badge-label">Boreholes</span>
+                        <span class="badge-status">Completed</span>
+                    </span>
                 </div>
                 <div class="project-info">
                     <h3 class="project-title">Drilling & Equipping of Fire Station Borehole</h3>
@@ -285,31 +400,66 @@
 
     <!-- Stats Section -->
     <section class="stats-section">
-        <div class="stats-grid">
-            <div class="stat-item">
-                <div class="stat-number">23+</div>
-                <div class="stat-label">Completed Projects</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">1</div>
-                <div class="stat-label">Ongoing Panel Contract</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">R16M+</div>
-                <div class="stat-label">Total Project Value</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">8+</div>
-                <div class="stat-label">Years Experience</div>
+        <div class="stats-container">
+            <h2 class="stats-title">Our Track Record</h2>
+            <p class="stats-subtitle">Numbers that speak for themselves</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-number">23+</div>
+                    <div class="stat-label">Completed Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Ongoing Panel Contract</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-rand-sign"></i>
+                    </div>
+                    <div class="stat-number">R16M+</div>
+                    <div class="stat-label">Total Project Value</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
-        <h2 class="cta-title">Have a Project in Mind?</h2>
-        <p class="cta-text">Let's build something great together. Get in touch with our team today.</p>
-        <button class="cta-btn">Start Your Project</button>
+        <div class="cta-container">
+            <div class="cta-content">
+                <div class="cta-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h2 class="cta-title">Have a Project in Mind?</h2>
+                <p class="cta-text">Let's build something great together. Get in touch with our team today to discuss your construction needs.</p>
+                <div class="cta-buttons">
+                    <button class="cta-btn primary" onclick="window.location.href='ContactUs.html'">
+                        <span class="btn-text">Start Your Project</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                    <button class="cta-btn secondary" onclick="window.location.href='index.html#services'">
+                        <i class="fas fa-eye"></i>
+                        <span class="btn-text">View Our Services</span>
+                    </button>
+                </div>
+            </div>
+            <div class="cta-image">
+                <img src="logos/mainlogotransp.png" alt="Mudoita Investment" class="cta-logo">
+            </div>
+        </div>
     </section>
 
     
@@ -359,7 +509,7 @@
                     <ul class="footer-contact">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Centurion, South Africa</span>
+                            <span>Gauteng, South Africa</span>
                         </li>
                         <li>
                             <i class="fas fa-phone"></i>

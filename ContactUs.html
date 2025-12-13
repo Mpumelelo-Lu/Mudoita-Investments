@@ -41,9 +41,52 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
+        <div class="hero-background">
+            <div class="hero-pattern"></div>
+            <div class="hero-gradient"></div>
+        </div>
         <div class="hero-content">
-            <h1 class="hero-title fade-in-up" id="heroTitle">Get In Touch</h1>
-            <p class="hero-subtitle fade-in-up" id="heroSubtitle">Have a project in mind? We'd love to hear from you. Let's build something great together.</p>
+            <div class="hero-badge">
+                <i class="fas fa-handshake"></i>
+                <span>Let's Build Together</span>
+            </div>
+            <h1 class="hero-title fade-in-up" id="heroTitle">
+                Get In Touch
+                <span class="hero-accent">Today</span>
+            </h1>
+            <p class="hero-subtitle fade-in-up" id="heroSubtitle">
+                Have a project in mind? We'd love to hear from you. Let's build something great together and turn your vision into reality.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">48hrs</div>
+                    <div class="stat-label">Response Time</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="#contactForm" class="cta-primary">
+                    <i class="fas fa-envelope"></i>
+                    Send Message
+                </a>
+                <a href="tel:+27123456789" class="cta-secondary">
+                    <i class="fas fa-phone"></i>
+                    Call Now
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-text">Scroll to explore</div>
+            <div class="scroll-icon">
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </div>
     </section>
 
@@ -89,122 +132,352 @@
 
     <!-- Contact Section -->
     <section class="contact-section">
+        <div class="section-header">
+            <h2 class="section-title">Contact Information</h2>
+            <p class="section-subtitle">Multiple ways to reach us - choose what works best for you</p>
+        </div>
+
         <div class="contact-grid">
             <!-- Contact Info -->
             <div class="contact-info">
                 <div class="info-card fade-in-up" data-delay="100">
                     <div class="info-header">
-                        <div class="info-icon"><i class="fas fa-map-marker-alt" style="color: #fff;"></i></div>
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
                         <h3 class="info-title">Our Location</h3>
                     </div>
                     <div class="info-details">
-                        Centurion, Gauteng<br>
-                        South Africa
+                        <div class="location-primary">Gauteng, South Africa</div>
+                        <div class="location-secondary">Satellite offices nationwide</div>
+                        <a href="#" class="location-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            View on Map
+                        </a>
+                    </div>
+                    <div class="card-decoration">
+                        <div class="decoration-line"></div>
                     </div>
                 </div>
 
                 <div class="info-card fade-in-up" data-delay="200">
                     <div class="info-header">
-                        <div class="info-icon"><i class="fas fa-envelope" style="color: #fff;"></i></div>
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
                         <h3 class="info-title">Email Us</h3>
                     </div>
                     <div class="info-details">
-                        <a href="mailto:info@mudoita.co.za">info@mudoita.co.za</a><br>
-                        <a href="mailto:projects@mudoita.co.za">projects@mudoita.co.za</a>
+                        <div class="email-group">
+                            <a href="mailto:info@mudoita.co.za" class="email-link primary">
+                                <i class="fas fa-envelope"></i>
+                                info@mudoita.co.za
+                            </a>
+                            <span class="email-label">General Inquiries</span>
+                        </div>
+                        <div class="email-group">
+                            <a href="mailto:projects@mudoita.co.za" class="email-link secondary">
+                                <i class="fas fa-briefcase"></i>
+                                projects@mudoita.co.za
+                            </a>
+                            <span class="email-label">Project Enquiries</span>
+                        </div>
+                    </div>
+                    <div class="card-decoration">
+                        <div class="decoration-line"></div>
                     </div>
                 </div>
 
                 <div class="info-card fade-in-up" data-delay="300">
                     <div class="info-header">
-                        <div class="info-icon"><i class="fas fa-phone" style="color: #fff;"></i></div>
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
                         <h3 class="info-title">Call Us</h3>
                     </div>
                     <div class="info-details">
-                        Office: <a href="tel:+27123456789">+27 12 345 6789</a><br>
-                        Mobile: <a href="tel:+27823456789">+27 82 345 6789</a>
+                        <div class="phone-group">
+                            <a href="tel:+27123456789" class="phone-link primary">
+                                <i class="fas fa-phone"></i>
+                                +27 12 345 6789
+                            </a>
+                            <span class="phone-label">Office Line</span>
+                        </div>
+                        <div class="phone-group">
+                            <a href="tel:+27823456789" class="phone-link secondary">
+                                <i class="fas fa-mobile-alt"></i>
+                                +27 82 345 6789
+                            </a>
+                            <span class="phone-label">Mobile (WhatsApp)</span>
+                        </div>
+                        <div class="availability-status">
+                            <div class="status-indicator online"></div>
+                            <span>Available for calls</span>
+                        </div>
+                    </div>
+                    <div class="card-decoration">
+                        <div class="decoration-line"></div>
                     </div>
                 </div>
 
                 <div class="info-card fade-in-up" data-delay="400">
                     <div class="info-header">
-                        <div class="info-icon"><i class="fas fa-clock" style="color: #fff;"></i></div>
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
                         <h3 class="info-title">Business Hours</h3>
                     </div>
                     <div class="info-details">
-                        Monday - Friday: 8:00 AM - 5:00 PM<br>
-                        Saturday: 9:00 AM - 1:00 PM<br>
-                        Sunday: Closed
+                        <div class="hours-schedule">
+                            <div class="hours-day">
+                                <span class="day-name">Monday - Friday</span>
+                                <span class="day-hours">8:00 AM - 5:00 PM</span>
+                            </div>
+                            <div class="hours-day">
+                                <span class="day-name">Saturday</span>
+                                <span class="day-hours">9:00 AM - 1:00 PM</span>
+                            </div>
+                            <div class="hours-day closed">
+                                <span class="day-name">Sunday</span>
+                                <span class="day-hours">Closed</span>
+                            </div>
+                        </div>
+                        <div class="emergency-contact">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>24/7 Emergency Support Available</span>
+                        </div>
+                    </div>
+                    <div class="card-decoration">
+                        <div class="decoration-line"></div>
                     </div>
                 </div>
             </div>
 
             <!-- Contact Form -->
             <div class="form-container fade-in-up" data-delay="500">
-                <h2 class="form-title">Send Us a Message</h2>
-                <p class="form-subtitle">Fill out the form below and we'll get back to you shortly.</p>
+                <div class="form-header">
+                    <div class="form-icon">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <h2 class="form-title">Send Us a Message</h2>
+                    <p class="form-subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
+                </div>
 
                 <div class="success-message" id="successMessage">
-                    <i class="fas fa-check-circle" style="color: #fff;"></i> Thank you! Your message has been sent successfully. We'll get back to you soon.
+                    <div class="message-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Message Sent Successfully!</h3>
+                    <p>Thank you for contacting us. We'll get back to you soon.</p>
                 </div>
 
                 <div class="error-message" id="errorMessage">
-                    <i class="fas fa-times-circle" style="color: #fff;"></i> Oops! Something went wrong. Please try again or contact us directly via email.
+                    <div class="message-icon">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                    <h3>Oops! Something went wrong</h3>
+                    <p>Please try again or contact us directly via email.</p>
                 </div>
 
-                <form id="contactForm" method="POST">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label" for="firstName">First Name *</label>
-                            <input type="text" id="firstName" name="firstName" class="form-input" required>
+                <form id="contactForm" method="POST" novalidate>
+                    <div class="form-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
                         </div>
-                        <div class="form-group">
-                            <label class="form-label" for="lastName">Last Name *</label>
-                            <input type="text" id="lastName" name="lastName" class="form-input" required>
+                        <div class="progress-text">
+                            <span id="progressText">0 of 6 fields completed</span>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label class="form-label" for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" class="form-input" required>
+                            <label class="form-label" for="firstName">
+                                First Name <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-user input-icon"></i>
+                                <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                <div class="input-feedback"></div>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label class="form-label" for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" class="form-input">
+                            <label class="form-label" for="lastName">
+                                Last Name <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-user input-icon"></i>
+                                <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                <div class="input-feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="email">
+                                Email Address <span class="required">*</span>
+                            </label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope input-icon"></i>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                                <div class="input-feedback"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">
+                                Phone Number
+                            </label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-phone input-icon"></i>
+                                <input type="tel" id="phone" name="phone" class="form-input">
+                                <div class="input-feedback"></div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label" for="company">Company Name</label>
-                        <input type="text" id="company" name="company" class="form-input">
+                        <label class="form-label" for="company">
+                            Company Name
+                        </label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-building input-icon"></i>
+                            <input type="text" id="company" name="company" class="form-input">
+                            <div class="input-feedback"></div>
+                        </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label" for="subject">Subject *</label>
-                        <select id="subject" name="subject" class="form-select" required>
-                            <option value="">Select a subject</option>
-                            <option value="general">General Inquiry</option>
-                            <option value="quote">Request a Quote</option>
-                            <option value="project">New Project</option>
-                            <option value="partnership">Partnership Opportunity</option>
-                            <option value="other">Other</option>
-                        </select>
+                        <label class="form-label" for="subject">
+                            Subject <span class="required">*</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-tag input-icon"></i>
+                            <select id="subject" name="subject" class="form-select" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="quote">Request a Quote</option>
+                                <option value="project">New Project</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="maintenance">Maintenance Services</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <i class="fas fa-chevron-down select-arrow"></i>
+                            <div class="input-feedback"></div>
+                        </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label" for="message">Message *</label>
-                        <textarea id="message" name="message" class="form-textarea" required></textarea>
+                        <label class="form-label" for="message">
+                            Message <span class="required">*</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <textarea id="message" name="message" class="form-textarea" required placeholder="Tell us about your project..."></textarea>
+                            <div class="textarea-counter">
+                                <span id="charCount">0</span>/500 characters
+                            </div>
+                            <div class="input-feedback"></div>
+                        </div>
                     </div>
 
-                    <!-- Enhanced email system -->
-                    <div style="margin-top:2rem;text-align:center;">
-                      <button type="button" id="sendEmailBtn" class="cta-btn" style="display:inline-block;">Send Message</button>
+                    <div class="form-actions">
+                        <button type="button" id="sendEmailBtn" class="cta-btn primary">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send Message</span>
+                        </button>
+                        <button type="button" id="resetBtn" class="cta-btn secondary">
+                            <i class="fas fa-redo"></i>
+                            <span>Reset Form</span>
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
     </section>
-    
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Don't just take our word for it - hear from our satisfied clients</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in-up" data-delay="100">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Mudoita Investment delivered exceptional quality on our borehole rehabilitation project. Their expertise and professionalism exceeded our expectations."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">Thabo M.</div>
+                                <div class="author-title">Operations Manager, Modimolle Municipality</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in-up" data-delay="200">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Outstanding service from start to finish. The team's attention to detail and commitment to timelines made our infrastructure project a success."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">Sarah K.</div>
+                                <div class="author-title">Project Manager, Bushbuckridge Municipality</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in-up" data-delay="300">
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Professional, reliable, and cost-effective. Mudoita Investment has become our go-to partner for all civil engineering requirements."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="author-info">
+                                <div class="author-name">David L.</div>
+                                <div class="author-title">CEO, Lekwa Local Municipality</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
@@ -251,7 +524,7 @@
                     <ul class="footer-contact">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Centurion, South Africa</span>
+                            <span>Gauteng, South Africa</span>
                         </li>
                         <li>
                             <i class="fas fa-phone"></i>
@@ -354,7 +627,7 @@
             },
             contact: {
                 title: "📞 Contact Information",
-                response: "📍 Location: Centurion, Gauteng, South Africa<br>📧 Email: info@mudoita.co.za<br>📧 Projects: projects@mudoita.co.za<br>📞 Office: +27 12 345 6789<br>📱 Mobile: +27 82 345 6789<br>🕒 Hours: Mon-Fri 8AM-5PM, Sat 9AM-1PM"
+                response: "📍 Location: Gauteng with satellite offices, South Africa<br>📧 Email: info@mudoita.co.za<br>📧 Projects: projects@mudoita.co.za<br>📞 Office: +27 12 345 6789<br>📱 Mobile: +27 82 345 6789<br>🕒 Hours: Mon-Fri 8AM-5PM, Sat 9AM-1PM"
             }
         };
 
@@ -451,7 +724,14 @@
 
             // Basic validation
             if (!firstName || !lastName || !email || !subject || !message) {
-                alert('Please fill in all required fields.');
+                showMessage('error', 'Please fill in all required fields.');
+                return;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showMessage('error', 'Please enter a valid email address.');
                 return;
             }
 
@@ -467,15 +747,150 @@
 
             // Create mailto link
             const mailtoLink = `mailto:info@mudoita.co.za?subject=${encodeURIComponent('Contact Form: ' + subject)}&body=${encodeURIComponent(emailBody)}`;
-            
+
             // Open email client
             window.location.href = mailtoLink;
-            
+
             // Show success message
-            setTimeout(() => {
-                alert('Your email client has been opened with the message. Please send the email to complete your inquiry.');
-            }, 500);
+            showMessage('success', 'Your email client has been opened. Please send the email to complete your inquiry.');
         });
+
+        // Form validation and progress tracking
+        const formInputs = document.querySelectorAll('.form-input, .form-select, .form-textarea');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        const charCount = document.getElementById('charCount');
+
+        function updateProgress() {
+            let filledFields = 0;
+            const requiredFields = document.querySelectorAll('.form-input[required], .form-select[required], .form-textarea[required]');
+
+            requiredFields.forEach(field => {
+                if (field.value.trim() !== '') {
+                    filledFields++;
+                }
+            });
+
+            const progress = (filledFields / requiredFields.length) * 100;
+            progressFill.style.width = progress + '%';
+            progressText.textContent = `${filledFields} of ${requiredFields.length} fields completed`;
+        }
+
+        // Character counter for textarea
+        document.getElementById('message').addEventListener('input', function() {
+            const count = this.value.length;
+            charCount.textContent = count;
+            if (count > 500) {
+                charCount.style.color = '#ef4444';
+            } else {
+                charCount.style.color = '#64748b';
+            }
+        });
+
+        // Real-time validation
+        formInputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                validateField(this);
+            });
+
+            input.addEventListener('input', function() {
+                updateProgress();
+                if (this.classList.contains('error')) {
+                    validateField(this);
+                }
+            });
+        });
+
+        function validateField(field) {
+            const feedback = field.parentElement.querySelector('.input-feedback');
+            const value = field.value.trim();
+
+            // Remove existing feedback
+            feedback.className = 'input-feedback';
+
+            if (field.hasAttribute('required') && !value) {
+                showFieldError(field, 'This field is required');
+                return false;
+            }
+
+            if (field.type === 'email' && value) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    showFieldError(field, 'Please enter a valid email address');
+                    return false;
+                }
+            }
+
+            if (field.tagName === 'TEXTAREA' && value.length > 500) {
+                showFieldError(field, 'Message must be less than 500 characters');
+                return false;
+            }
+
+            if (value) {
+                showFieldSuccess(field, 'Looks good!');
+            }
+
+            return true;
+        }
+
+        function showFieldError(field, message) {
+            field.classList.add('error');
+            field.classList.remove('success');
+            const feedback = field.parentElement.querySelector('.input-feedback');
+            feedback.textContent = message;
+            feedback.classList.add('show', 'error');
+        }
+
+        function showFieldSuccess(field, message) {
+            field.classList.add('success');
+            field.classList.remove('error');
+            const feedback = field.parentElement.querySelector('.input-feedback');
+            feedback.textContent = message;
+            feedback.classList.add('show', 'success');
+        }
+
+        function showMessage(type, message) {
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+
+            // Hide both messages
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+
+            // Show appropriate message
+            if (type === 'success') {
+                successMsg.querySelector('p').textContent = message;
+                successMsg.style.display = 'block';
+                successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                errorMsg.querySelector('p').textContent = message;
+                errorMsg.style.display = 'block';
+                errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        // Reset form
+        document.getElementById('resetBtn').addEventListener('click', function() {
+            document.getElementById('contactForm').reset();
+            updateProgress();
+
+            // Clear validation states
+            document.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(field => {
+                field.classList.remove('error', 'success');
+                const feedback = field.parentElement.querySelector('.input-feedback');
+                feedback.className = 'input-feedback';
+            });
+
+            // Hide messages
+            document.getElementById('successMessage').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'none';
+
+            // Reset character counter
+            document.getElementById('charCount').textContent = '0';
+        });
+
+        // Initialize progress
+        updateProgress();
     </script>
 </body>
 </html>
