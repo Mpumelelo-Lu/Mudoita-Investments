@@ -9,6 +9,19 @@
     <script src="js/scrips.js" defer></script>
 </head>
 <body>
+    <!-- Loading Spinner -->
+    <div id="loading-spinner">
+        <div class="spinner-container">
+            <img src="logos/mainlogotransp.png" alt="Logo" class="spinner-logo">
+            <div class="spinner outer">
+                <div class="spinner inner">
+                    <div class="spinner eye">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section class="top-section">
         <!-- Navigation Bar -->
         <nav class="nav-oval">
@@ -129,25 +142,25 @@
                     <i class="fas fa-th-large"></i>
                     All Projects
                 </button>
-                <button class="filter-btn" data-filter="boreholes">
-                    <i class="fas fa-tint"></i>
-                    Boreholes
+                <button class="filter-btn" data-filter="building">
+                    <i class="fas fa-building"></i>
+                    Building Construction
                 </button>
-                <button class="filter-btn" data-filter="infrastructure">
+                <button class="filter-btn" data-filter="transportation">
                     <i class="fas fa-road"></i>
-                    Infrastructure
+                    Transportation
                 </button>
-                <button class="filter-btn" data-filter="sanitation">
-                    <i class="fas fa-toilet"></i>
-                    Sanitation
+                <button class="filter-btn" data-filter="water-sanitation">
+                    <i class="fas fa-tint"></i>
+                    Water & Sanitation
                 </button>
-                <button class="filter-btn" data-filter="construction">
-                    <i class="fas fa-tools"></i>
-                    Construction
+                <button class="filter-btn" data-filter="energy-power">
+                    <i class="fas fa-bolt"></i>
+                    Energy & Power
                 </button>
-                <button class="filter-btn" data-filter="supply">
-                    <i class="fas fa-box"></i>
-                    Supply
+                <button class="filter-btn" data-filter="industrial">
+                    <i class="fas fa-industry"></i>
+                    Industrial & Process
                 </button>
             </div>
         </div>
@@ -157,11 +170,11 @@
     <section class="projects-container">
         <div class="projects-grid" id="projectsGrid">
             <!-- Project 1 - Sandriver Upgrade -->
-            <div class="project-card" data-category="infrastructure">
+            <div class="project-card" data-category="water-sanitation">
                 <div class="project-image">
                     <img src="img/actualsandriver.jpg" alt="Sandriver Package Plant">
                     <span class="project-badge" data-status="completed">
-                        <span class="badge-label">Infrastructure</span>
+                        <span class="badge-label">Water & Sanitation Infrastructure</span>
                         <span class="badge-status">Completed</span>
                     </span>
                 </div>
@@ -177,11 +190,11 @@
             </div>
 
             <!-- Project 2 - Boreholes Panel -->
-            <div class="project-card" data-category="boreholes">
+            <div class="project-card" data-category="water-sanitation">
                 <div class="project-image">
                     <img src="img/sandriver.jpg" alt="Borehole Project">
                     <span class="project-badge" data-status="in-progress">
-                        <span class="badge-label">Boreholes</span>
+                        <span class="badge-label">Water & Sanitation Infrastructure</span>
                         <span class="badge-status">In Progress</span>
                     </span>
                 </div>
@@ -197,11 +210,11 @@
             </div>
 
             <!-- Project 3 - Boreholes Rehab -->
-            <div class="project-card" data-category="boreholes">
+            <div class="project-card" data-category="water-sanitation">
                 <div class="project-image">
                     <img src="img/boreholes.jpg" alt="Borehole Rehabilitation">
                     <span class="project-badge" data-status="completed">
-                        <span class="badge-label">Boreholes</span>
+                        <span class="badge-label">Water & Sanitation Infrastructure</span>
                         <span class="badge-status">Completed</span>
                     </span>
                 </div>
@@ -217,11 +230,11 @@
             </div>
 
             <!-- Project 4 - Dzingidzingi -->
-            <div class="project-card" data-category="boreholes">
+            <div class="project-card" data-category="water-sanitation">
                 <div class="project-image">
                     <img src="img/construct.jpg" alt="Water Reticulation">
                     <span class="project-badge" data-status="completed">
-                        <span class="badge-label">Water Infrastructure</span>
+                        <span class="badge-label">Water & Sanitation Infrastructure</span>
                         <span class="badge-status">Completed</span>
                     </span>
                 </div>
@@ -237,11 +250,11 @@
             </div>
 
             <!-- Project 5 - Refurbishment -->
-            <div class="project-card" data-category="boreholes">
+            <div class="project-card" data-category="water-sanitation">
                 <div class="project-image">
                     <img src="img/niceborehole.jpg" alt="Borehole Refurbishment">
                     <span class="project-badge" data-status="completed">
-                        <span class="badge-label">Boreholes</span>
+                        <span class="badge-label">Water & Sanitation Infrastructure</span>
                         <span class="badge-status">Completed</span>
                     </span>
                 </div>
@@ -257,11 +270,11 @@
             </div>
 
             <!-- Project 6 - School Renovation -->
-            <div class="project-card" data-category="construction">
+            <div class="project-card" data-category="building">
                 <div class="project-image">
                     <img src="img/maintenace.jpg" alt="School Building">
                     <span class="project-badge" data-status="completed">
-                        <span class="badge-label">Construction</span>
+                        <span class="badge-label">Building Construction</span>
                         <span class="badge-status">Completed</span>
                     </span>
                 </div>
@@ -277,11 +290,11 @@
             </div>
 
             <!-- Project 7 - Mtwalume -->
-            <div class="project-card" data-category="sanitation">
+            <div class="project-card" data-category="water-sanitation">
                 <div class="project-image">
                     <img src="img/pipes.jpg" alt="Sewer Treatment">
                     <span class="project-badge" data-status="completed">
-                        <span class="badge-label">Sanitation</span>
+                        <span class="badge-label">Water & Sanitation Infrastructure</span>
                         <span class="badge-status">Completed</span>
                     </span>
                 </div>
@@ -297,11 +310,11 @@
             </div>
 
             <!-- Project 8 - Lekwa Boreholes -->
-            <div class="project-card" data-category="boreholes">
+            <div class="project-card" data-category="water-sanitation">
                 <div class="project-image">
                     <img src="img/borehole3.jpg" alt="Borehole Drilling">
                     <span class="project-badge" data-status="completed">
-                        <span class="badge-label">Boreholes</span>
+                        <span class="badge-label">Water & Sanitation Infrastructure</span>
                         <span class="badge-status">Completed</span>
                     </span>
                 </div>
@@ -317,11 +330,11 @@
             </div>
 
             <!-- Project 9 - VIP Toilets Ward 4 -->
-            <div class="project-card" data-category="sanitation">
+            <div class="project-card" data-category="water-sanitation">
                 <div class="project-image">
                     <img src="img/toiletconstruct.jpg" alt="VIP Toilets">
                     <span class="project-badge" data-status="completed">
-                        <span class="badge-label">Sanitation</span>
+                        <span class="badge-label">Water & Sanitation Infrastructure</span>
                         <span class="badge-status">Completed</span>
                     </span>
                 </div>
@@ -337,11 +350,11 @@
             </div>
 
             <!-- Project 10 - VIP Toilets Ward 8 -->
-            <div class="project-card" data-category="sanitation">
+            <div class="project-card" data-category="water-sanitation">
                 <div class="project-image">
                     <img src="img/toilets.jpg" alt="VIP Toilets Installation">
                     <span class="project-badge" data-status="completed">
-                        <span class="badge-label">Sanitation</span>
+                        <span class="badge-label">Water & Sanitation Infrastructure</span>
                         <span class="badge-status">Completed</span>
                     </span>
                 </div>
@@ -357,11 +370,11 @@
             </div>
 
             <!-- Project 11 - Internal Access Road -->
-            <div class="project-card" data-category="infrastructure">
+            <div class="project-card" data-category="transportation">
                 <div class="project-image">
                     <img src="img/safety.jpg" alt="Road Construction">
                     <span class="project-badge" data-status="completed">
-                        <span class="badge-label">Infrastructure</span>
+                        <span class="badge-label">Transportation Infrastructure</span>
                         <span class="badge-status">Completed</span>
                     </span>
                 </div>
@@ -377,11 +390,11 @@
             </div>
 
             <!-- Project 12 - Fire Station Borehole -->
-            <div class="project-card" data-category="boreholes">
+            <div class="project-card" data-category="water-sanitation">
                 <div class="project-image">
                     <img src="img/drilling.jpg" alt="Fire Station Borehole">
                     <span class="project-badge" data-status="completed">
-                        <span class="badge-label">Boreholes</span>
+                        <span class="badge-label">Water & Sanitation Infrastructure</span>
                         <span class="badge-status">Completed</span>
                     </span>
                 </div>

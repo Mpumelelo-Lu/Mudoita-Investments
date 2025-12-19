@@ -9,6 +9,17 @@
     <script src="js/scrips.js" defer></script>
 </head>
 <body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <img src="logos/mainlogotransp.png" alt="Mudoita Investment" class="loader-logo">
+            <div class="loader-spinner">
+                <div class="inner-ring"></div>
+            </div>
+            <div class="loader-text">LOADING</div>
+        </div>
+    </div>
+
     <section class="top-section">
         <!-- Navigation Bar -->
         <nav class="nav-oval">
@@ -348,6 +359,29 @@
         </div>
     </footer>
 <script>
+// Page Loader
+window.addEventListener('load', function() {
+    const loader = document.getElementById('pageLoader');
+    if (loader) {
+        setTimeout(function() {
+            loader.classList.add('hidden');
+        }, 800);
+    }
+});
+
+// Show loader on page navigation
+document.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+            const loader = document.getElementById('pageLoader');
+            if (loader) {
+                loader.classList.remove('hidden');
+            }
+        }
+    });
+});
+
 // Scroll Progress Bar
 window.addEventListener('scroll', () => {
     const winScroll = document.documentElement.scrollTop;

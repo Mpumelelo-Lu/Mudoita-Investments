@@ -1,3 +1,28 @@
+// Loading Spinner
+window.addEventListener('load', function() {
+    const spinner = document.getElementById('loading-spinner');
+    if (spinner) {
+        setTimeout(function() {
+            spinner.classList.add('hidden');
+        }, 500);
+    }
+});
+
+// Show spinner on page navigation
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+                const spinner = document.getElementById('loading-spinner');
+                if (spinner) {
+                    spinner.classList.remove('hidden');
+                }
+            }
+        });
+    });
+});
+
 // Typing animation
 const words = ['excavation', 'foundation', 'structure', 'concrete', 'steel', 'quality'];
 let wordIndex = 0;
