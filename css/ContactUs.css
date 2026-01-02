@@ -292,14 +292,6 @@ body {
     border-radius: 999px;
 }
 
-/* Projects button — keep blue by default */
-.nav-link.projects {
-    background: #1e3a8a;
-    color: #ffffff;
-    padding: 0.5rem 0.9rem;
-    border-radius: 999px;
-}
-
 /* On desktop, when active, show links inline inside the nav */
 @media (min-width: 769px) {
     .nav-links.active {
