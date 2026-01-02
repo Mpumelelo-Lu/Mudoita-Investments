@@ -10,6 +10,23 @@ window.addEventListener('load', function() {
 
 // Show spinner on page navigation
 document.addEventListener('DOMContentLoaded', function() {
+    // Highlight active nav link based on current page
+    const path = window.location.pathname.toLowerCase();
+    let active = 'home';
+    if (path.endsWith('contactus.html')) {
+        active = 'contact';
+    } else if (path.endsWith('projects.html')) {
+        active = 'projects';
+    }
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        const href = (link.getAttribute('href') || '').toLowerCase();
+        const isHome = active === 'home' && (href === '#' || href.endsWith('index.html'));
+        const isProjects = active === 'projects' && href.endsWith('projects.html');
+        const isContact = active === 'contact' && href.endsWith('contactus.html');
+        link.classList.toggle('active', isHome || isProjects || isContact);
+    });
+
     document.querySelectorAll('a').forEach(function(link) {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');

@@ -286,6 +286,12 @@ body {
     background: rgba(135, 206, 250, 0.06);
 }
 
+.nav-link.active {
+    background: #1e3a8a;
+    color: #ffffff;
+    border-radius: 999px;
+}
+
 /* Projects button — keep blue by default */
 .nav-link.projects {
     background: #1e3a8a;
