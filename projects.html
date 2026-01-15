@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Construction Site</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
     <link rel="stylesheet" href="css/project.css">
     <script src="js/scrips.js" defer></script>
 </head>
@@ -138,27 +139,27 @@
                 <span class="filter-label">Filter Projects by Category:</span>
             </div>
             <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">
+                <button class="filter-btn active" data-filter="all" id="all">
                     <i class="fas fa-th-large"></i>
                     All Projects
                 </button>
-                <button class="filter-btn" data-filter="building">
+                <button class="filter-btn" data-filter="building" id="building">
                     <i class="fas fa-building"></i>
                     Building Construction
                 </button>
-                <button class="filter-btn" data-filter="transportation">
+                <button class="filter-btn" data-filter="transportation" id="transportation">
                     <i class="fas fa-road"></i>
                     Transportation
                 </button>
-                <button class="filter-btn" data-filter="water-sanitation">
+                <button class="filter-btn" data-filter="water-sanitation" id="water-sanitation">
                     <i class="fas fa-tint"></i>
                     Water & Sanitation
                 </button>
-                <button class="filter-btn" data-filter="energy-power">
+                <button class="filter-btn" data-filter="energy-power" id="energy-power">
                     <i class="fas fa-bolt"></i>
                     Energy & Power
                 </button>
-                <button class="filter-btn" data-filter="industrial">
+                <button class="filter-btn" data-filter="industrial" id="industrial">
                     <i class="fas fa-industry"></i>
                     Industrial & Process
                 </button>
@@ -368,21 +369,20 @@
                 <div class="footer-column">
                     <h3 class="footer-heading">Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Home</a></li>               
-                       
+                        <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
                         <li><a href="projects.html"><i class="fas fa-angle-right"></i> Projects</a></li>
-                        <li><a href="contactUs.html"><i class="fas fa-angle-right"></i> Contact</a></li>
+                        <li><a href="ContactUs.html"><i class="fas fa-angle-right"></i> Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
                     <h3 class="footer-heading">Our Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Bridge Construction</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Pipeline & Sewer</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Electrification</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Project Management</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> HVAC Systems</a></li>
+                        <li><a href="projects.html"><i class="fas fa-angle-right"></i> Bridge Construction</a></li>
+                        <li><a href="projects.html"><i class="fas fa-angle-right"></i> Pipeline & Sewer</a></li>
+                        <li><a href="projects.html"><i class="fas fa-angle-right"></i> Electrification</a></li>
+                        <li><a href="projects.html"><i class="fas fa-angle-right"></i> Project Management</a></li>
+                        <li><a href="projects.html"><i class="fas fa-angle-right"></i> HVAC Systems</a></li>
                     </ul>
                 </div>
 
@@ -395,11 +395,11 @@
                         </li>
                         <li>
                             <i class="fas fa-phone"></i>
-                            <span>+27 (0) 123 456 789</span>
+                            <span>+27 (0) 12 004 0829</span>
                         </li>
                         <li>
                             <i class="fas fa-envelope"></i>
-                            <span>info@mudoita.co.za</span>
+                            <span>info@mudoitainvestment.co.za</span>
                         </li>
                         <li>
                             <i class="fas fa-clock"></i>
@@ -449,6 +449,19 @@
                     }
                 });
             });
+
+            function applyFilterFromHash() {
+                const hash = window.location.hash.replace('#', '');
+                if (!hash) return;
+                const targetBtn = document.querySelector(`.filter-btn[data-filter="${hash}"]`);
+                if (targetBtn) {
+                    targetBtn.click();
+                    targetBtn.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+
+            window.addEventListener('hashchange', applyFilterFromHash);
+            applyFilterFromHash();
         });
 
         // Stagger animation on load

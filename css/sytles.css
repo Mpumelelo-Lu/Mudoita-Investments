@@ -297,11 +297,9 @@ body {
     background: rgba(135, 206, 250, 0.06);
 }
 
-/* Projects button — keep blue by default */
-.nav-link.projects {
+.nav-link.active {
     background: #1e3a8a;
     color: #ffffff;
-    padding: 0.5rem 0.9rem;
     border-radius: 999px;
 }
 
@@ -1233,7 +1231,7 @@ h1 {
             /* Replace with your image */
             background: 
                 linear-gradient(135deg, rgba(135, 206, 250, 0.3), rgba(30, 58, 138, 0.2)),
-                url('../img/safety.jpg') center/cover;
+                url('../img/drilli.jpg') center/cover;
         }
 
         /* Loading Spinner */
