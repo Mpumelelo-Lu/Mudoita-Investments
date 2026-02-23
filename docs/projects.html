@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudoita Investment | Projects</title>
+    <meta name="description" content="Explore Mudoita Investments’ completed and ongoing civil engineering, water & sanitation, building construction, and supply projects across South Africa.">
+    <meta name="keywords" content="Mudoita Investments, construction projects, civil engineering, water and sanitation, borehole drilling, building renovation, supply and delivery, South Africa">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="projects.html">
+
+    <meta property="og:title" content="Mudoita Investments | Projects">
+    <meta property="og:description" content="View our portfolio of civil engineering, water & sanitation, building construction and supply projects across South Africa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="projects.html">
+    <meta property="og:image" content="logos/mainlogotransp.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mudoita Investments | Projects">
+    <meta name="twitter:description" content="View our portfolio of civil engineering, water & sanitation, building construction and supply projects across South Africa.">
+    <meta name="twitter:image" content="logos/mainlogotransp.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="stylesheet" href="css/project.css">
+    <script src="js/scrips.js" defer></script>
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div id="loading-spinner">
+        <div class="spinner-container">
+            <img src="logos/mainlogotransp.png" alt="Logo" class="spinner-logo">
+            <div class="spinner outer">
+                <div class="spinner inner">
+                    <div class="spinner eye">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="top-section">
+        <!-- Navigation Bar -->
+        <nav class="nav-oval">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="logos/mainlogotransp.png" alt="Logo">
+            </div>
+
+            <!-- Typing Animation -->
+            <div class="typing-container">
+                <span class="typing-text" id="typingText"></span>
+                <span class="cursor">|</span>
+            </div>
+
+            <!-- Navigation Links (hidden by default) -->
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="ContactUs.html" class="nav-link">Contact Us</a>
+                <a href="projects.html" class="nav-link projects">Projects</a>
+            </div>
+
+            <!-- Menu Button -->
+            <button class="menu-btn" id="menuBtn">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </nav>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </section>
+
+     <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="status-badge">
+                        <span class="pulse-dot"></span>
+                        Site Active
+                    </div>
+
+                    <h1>
+                        Our <span class="highlight">Projects</span><br>
+                        Building Excellence Since 2016
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Explore our portfolio of successful civil engineering and construction projects across South Africa.<br>
+                        <span class="bold-text">Quality Work, Proven Results, Satisfied Clients.</span>
+                    </p>
+
+                    <!-- Trust Indicators -->
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <div class="trust-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="trust-text">
+                                <strong>12+ Projects</strong>
+                                Successfully Completed
+                            </div>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <div class="trust-text">
+                                <strong>Multi-Province</strong>
+                                Service Coverage
+                            </div>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="trust-text">
+                                <strong>98% Satisfaction</strong>
+                                Client Rating
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="hero-image-main">
+                        <img src="logos/main2.png" alt="Construction Projects" style="width: 80%; height: auto; display: block; margin: 0 auto;">
+                    </div>
+
+                    <div class="floating-stat stat-1">
+                        <div class="stat-number">R16M+</div>
+                        <div class="stat-label">Project Value</div>
+                    </div>
+
+                    <div class="floating-stat stat-2">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="filter-header">
+                <i class="fas fa-filter"></i>
+                <span class="filter-label">Filter Projects by Category:</span>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all" id="all">
+                    <i class="fas fa-th-large"></i>
+                    All Projects
+                </button>
+                <button class="filter-btn" data-filter="building" id="building">
+                    <i class="fas fa-building"></i>
+                    Building Construction
+                </button>
+                <button class="filter-btn" data-filter="water-sanitation" id="water-sanitation">
+                    <i class="fas fa-tint"></i>
+                    Water & Sanitation
+                </button>
+                <button class="filter-btn" data-filter="supply-delivery">
+                    <i class="fas fa-truck-moving"></i>
+                    Supply & Delivery
+                </button>
+                <button class="filter-btn" data-filter="scientific-services">
+                    <i class="fas fa-flask"></i>
+                    Scientific Services
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-container">
+        <div class="projects-grid" id="projectsGrid">
+            <!-- Project 1 - Sandriver Upgrade -->
+            <div class="project-card" data-category="water-sanitation">
+                <div class="project-image">
+                    <img src="img/Upgrading of sandriver package plant.jpeg" alt="Sandriver Package Plant">
+                    <span class="project-badge" data-status="completed">
+                        <span class="badge-label">Water & Sanitation Infrastructure</span>
+                        <span class="badge-status">Completed</span>
+                    </span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Upgrading of Sandriver Package Plant Phase 1</h3>
+                    <div class="project-client">Client: Bushbuckridge Local Municipality</div>
+                    <div class="project-value">R4,872,412.00</div>
+                    <div class="project-meta">
+                        <span class="project-year">Completed: Aug 2022</span>
+                        <span class="project-contact">Leonah Ngobeni</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 - Boreholes Panel -->
+            <div class="project-card" data-category="water-sanitation">
+                <div class="project-image">
+                    <img src="img/IMG-20250427-WA0057.jpg" alt="Borehole Project">
+                    <span class="project-badge" data-status="in-progress">
+                        <span class="badge-label">Water & Sanitation Infrastructure</span>
+                        <span class="badge-status">In Progress</span>
+                    </span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Supply, Refurbishment & Drilling of New Boreholes (3-Year Panel)</h3>
+                    <div class="project-client">Client: Bushbuckridge Local Municipality</div>
+                    <div class="project-value">As & When Required</div>
+                    <div class="project-meta">
+                        <span class="project-year">Ongoing Project</span>
+                        <span class="project-contact">Mr Makhavhu</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 8 - Lekwa Boreholes -->
+            <div class="project-card" data-category="water-sanitation">
+                <div class="project-image">
+                    <img src="img/Drilling of boreholes at Lekwa.jpeg" alt="Borehole Drilling">
+                    <span class="project-badge" data-status="completed">
+                        <span class="badge-label">Water & Sanitation Infrastructure</span>
+                        <span class="badge-status">Completed</span>
+                    </span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Drilling & Equipping of Boreholes (Ward 12 & 13)</h3>
+                    <div class="project-client">Client: Lekwa Local Municipality</div>
+                    <div class="project-value">R980,850.00</div>
+                    <div class="project-meta">
+                        <span class="project-year">Completed: Jan 2019</span>
+                        <span class="project-contact">Z July</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 9 - Scientific Services -->
+            <div class="project-card" data-category="scientific-services">
+                <div class="project-image">
+                    <img src="img/bighole.jpg" alt="Scientific Services">
+                    <span class="project-badge" data-status="in-progress">
+                        <span class="badge-label">Scientific Services</span>
+                        <span class="badge-status">In Progress</span>
+                    </span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Render Scientific Services over a Period of 36 Months</h3>
+                    <div class="project-client">Contract: Vhembe District Municipality</div>
+                    <div class="project-value">Project Value: Unknown</div>
+                    <div class="project-meta">
+                        <span class="project-year">Ongoing Project</span>
+                        <span class="project-contact">Kutama Z.N</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 10 - Improved Sanitation Toilets -->
+            <div class="project-card" data-category="water-sanitation">
+                <div class="project-image">
+                    <img src="img/WhatsApp Image 2025-04-27 at 07.12.52_1ec3a1f7.jpg" alt="Improved Sanitation Toilets" class="image-top">
+                    <span class="project-badge" data-status="completed">
+                        <span class="badge-label">Water & Sanitation Infrastructure</span>
+                        <span class="badge-status">Completed</span>
+                    </span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Improved Sanitation Toilets in Ward 1, 9, 10 & Phase 2</h3>
+                    <div class="project-client">Client: Dr Pixely Ka Isaka Seme Local Municipality</div>
+                    <div class="project-value">R2,873,421.34</div>
+                    <div class="project-meta">
+                        <span class="project-year">Completed Project</span>
+                        <span class="project-contact">MA Ngcobo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 11 - Lekwa Toilets Installation -->
+            <div class="project-card" data-category="water-sanitation">
+                <div class="project-image">
+                    <img src="img/Construction of vip toilets at Lekwa local municipality.jpeg" alt="Toilets Installation">
+                    <span class="project-badge" data-status="completed">
+                        <span class="badge-label">Water & Sanitation Infrastructure</span>
+                        <span class="badge-status">Completed</span>
+                    </span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Installation of Toilets in Ward 9, 12 & 13</h3>
+                    <div class="project-client">Client: Lekwa Local Municipality</div>
+                    <div class="project-value">R1,779,975.75</div>
+                    <div class="project-meta">
+                        <span class="project-year">Completed Project</span>
+                        <span class="project-contact">Mr M.J Lamola</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 12 - Lesedi Cleaning Materials Supply -->
+            <div class="project-card" data-category="supply-delivery">
+                <div class="project-image">
+                    <img src="img/sandriver.jpg" alt="Cleaning Materials Supply">
+                    <span class="project-badge" data-status="in-progress">
+                        <span class="badge-label">Supply & Delivery</span>
+                        <span class="badge-status">In Progress</span>
+                    </span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Supply & Delivery of Cleaning Material and Equipment</h3>
+                    <div class="project-client">Client: Lesedi Local Municipality</div>
+                    <div class="project-value">Project Value: Unknown</div>
+                    <div class="project-meta">
+                        <span class="project-year">Ongoing Project</span>
+                        <span class="project-contact">Mr Sbusiso Dlamini</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 13 - SA Army Ration Supply -->
+            <div class="project-card" data-category="supply-delivery">
+                <div class="project-image">
+                    <img src="img/GeneralSupply.jpg" alt="Ration Supply">
+                    <span class="project-badge" data-status="completed">
+                        <span class="badge-label">Supply & Delivery</span>
+                        <span class="badge-status">Completed</span>
+                    </span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Supply of Dairy Ration to Military</h3>
+                    <div class="project-client">Client: SA Army</div>
+                    <div class="project-value">Project Value: Unknown</div>
+                    <div class="project-meta">
+                        <span class="project-year">Completed Project</span>
+                        <span class="project-contact">A Hlanjwa</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 14 - Lekwa Municipal Offices Renovation -->
+            <div class="project-card" data-category="building">
+                <div class="project-image">
+                    <img src="img/IMG-20250427-WA0072.jpg" alt="Municipal Offices Renovation">
+                    <span class="project-badge" data-status="completed">
+                        <span class="badge-label">Building Construction</span>
+                        <span class="badge-status">Completed</span>
+                    </span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Installation of Floor Tiles & Industrial Carpets (Municipal Offices Renovation)</h3>
+                    <div class="project-client">Client: Lekwa Local Municipality</div>
+                    <div class="project-value">Project Value: Unknown</div>
+                    <div class="project-meta">
+                        <span class="project-year">Completed Project</span>
+                        <span class="project-contact">M Masuku</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 15 - Dr Pixely Ka Seme Water & Sanitation Repairs -->
+            <div class="project-card" data-category="water-sanitation">
+                <div class="project-image">
+                    <img src="img/niceborehole.jpg" alt="Water & Sanitation Repairs">
+                    <span class="project-badge" data-status="in-progress">
+                        <span class="badge-label">Water & Sanitation Infrastructure</span>
+                        <span class="badge-status">In Progress</span>
+                    </span>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">Repairs & Replacement of Water & Sanitation Infrastructure Components</h3>
+                    <div class="project-client">Client: Dr Pixely Ka Seme Local Municipality</div>
+                    <div class="project-value">Project Value: Unknown</div>
+                    <div class="project-meta">
+                        <span class="project-year">Ongoing Project</span>
+                        <span class="project-contact">MA Ngcobo</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <h2 class="stats-title">Our Track Record</h2>
+            <p class="stats-subtitle">Numbers that speak for themselves</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Completed Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Ongoing Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-sack-dollar"></i>
+                    </div>
+                    <div class="stat-number">R16M+</div>
+                    <div class="stat-label">Total Project Value</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <div class="cta-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h2 class="cta-title">Have a Project in Mind?</h2>
+                <p class="cta-text">Let's build something great together. Get in touch with our team today to discuss your construction needs.</p>
+                <div class="cta-buttons">
+                    <button class="cta-btn primary" onclick="window.location.href='ContactUs.html'">
+                        <span class="btn-text">Start Your Project</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                    <button class="cta-btn secondary" onclick="window.location.href='index.html#services'">
+                        <i class="fas fa-eye"></i>
+                        <span class="btn-text">View Our Services</span>
+                    </button>
+                </div>
+            </div>
+            <div class="cta-image">
+                <img src="logos/mainlogotransp.png" alt="Mudoita Investment" class="cta-logo">
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <div class="footer-column footer-about">
+                    <div class="footer-logo">
+                        <img src="logos/mainlogotransp.png" alt="Mudoita Investment">
+                    </div>
+                    <p class="footer-description">
+                        Building excellence since 2016. Professional civil engineering and construction services for commercial and residential projects.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                        <li><a href="projects.html"><i class="fas fa-angle-right"></i> Projects</a></li>
+                        <li><a href="ContactUs.html"><i class="fas fa-angle-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="projects.html"><i class="fas fa-angle-right"></i> Bridge Construction</a></li>
+                        <li><a href="projects.html"><i class="fas fa-angle-right"></i> Pipeline & Sewer</a></li>
+                        <li><a href="projects.html"><i class="fas fa-angle-right"></i> Electrification</a></li>
+                        <li><a href="projects.html"><i class="fas fa-angle-right"></i> Project Management</a></li>
+                        <li><a href="projects.html"><i class="fas fa-angle-right"></i> HVAC Systems</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Gauteng, South Africa</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+27 (0) 12 004 0829</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@mudoitainvestment.co.za</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Fri: 8:00 AM - 5:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Mudoita Investment (Pty) Ltd. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="Privacy.html">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="Terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filter Functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                projectCards.forEach(card => {
+                    const category = card.dataset.category;
+                    
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'block';
+                        card.style.animation = 'none';
+                        setTimeout(() => {
+                            card.style.animation = 'fadeIn 0.6s ease forwards';
+                        }, 10);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+
+            function applyFilterFromHash() {
+                const hash = window.location.hash.replace('#', '');
+                if (!hash) return;
+                const targetBtn = document.querySelector(`.filter-btn[data-filter="${hash}"]`);
+                if (targetBtn) {
+                    targetBtn.click();
+                    targetBtn.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+
+            window.addEventListener('hashchange', applyFilterFromHash);
+            applyFilterFromHash();
+        });
+
+        // Stagger animation on load
+        projectCards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
+    </script>
+
+    <!-- Animate headings and paragraphs on scroll and start -->
+<script>
+function animateOnScroll() {
+  const elements = document.querySelectorAll('h1, h2, h3, p');
+  const windowHeight = window.innerHeight;
+  elements.forEach(el => {
+    const position = el.getBoundingClientRect().top;
+    if (position < windowHeight - 50) {
+      el.classList.add('visible');
+    }
+  });
+}
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('DOMContentLoaded', animateOnScroll);
+</script>
+</body>
+</html>
