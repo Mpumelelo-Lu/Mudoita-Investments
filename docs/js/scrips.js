@@ -1,15 +1,49 @@
-// Loading Spinner
-window.addEventListener('load', function() {
+function hideLoadingSpinner(delay = 0) {
     const spinner = document.getElementById('loading-spinner');
-    if (spinner) {
-        setTimeout(function() {
-            spinner.classList.add('hidden');
-        }, 500);
+    if (!spinner || spinner.classList.contains('hidden')) {
+        return;
     }
+
+    setTimeout(function() {
+        spinner.classList.add('hidden');
+    }, delay);
+}
+
+function isProjectsPage() {
+    const path = window.location.pathname.toLowerCase();
+    return path.endsWith('/projects.html') || path.endsWith('projects.html');
+}
+
+function optimizeProjectsImages() {
+    if (!isProjectsPage()) {
+        return;
+    }
+
+    const heroImage = document.querySelector('.hero-image-main img');
+    if (heroImage) {
+        heroImage.loading = 'eager';
+        heroImage.fetchPriority = 'high';
+        heroImage.decoding = 'async';
+    }
+
+    const projectImages = document.querySelectorAll('.project-image img');
+    projectImages.forEach(function(image) {
+        image.loading = 'lazy';
+        image.fetchPriority = 'low';
+        image.decoding = 'async';
+    });
+}
+
+// Fallback: ensure spinner is hidden once all assets are complete
+window.addEventListener('load', function() {
+    hideLoadingSpinner(120);
 });
 
 // Show spinner on page navigation
 document.addEventListener('DOMContentLoaded', function() {
+    hideLoadingSpinner(120);
+    optimizeProjectsImages();
+
     // Highlight active nav link based on current page
     const path = window.location.pathname.toLowerCase();
     let active = 'home';
